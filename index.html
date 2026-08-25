@@ -15,8 +15,24 @@
         .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--secondary); }
         nav { display: flex; gap: 25px; align-items: center; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
+                nav a { 
+            display: inline-flex; align-items: center; gap: 6px;
+            text-decoration: none; 
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            color: #fff; 
+            font-weight: 600; 
+            font-size: .95rem;
+            padding: 9px 18px; 
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(59,130,246,.3);
+            transition: transform .2s, box-shadow .2s, filter .2s;
+            letter-spacing: .2px;
+        }
+        nav a:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(59,130,246,.45);
+            filter: brightness(1.08);
+        }
         /* 🌍 Menu langue custom */
         .lang-wrap { position: relative; display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #059669 0%, #1d4ed8 100%); padding: 11px 20px; border-radius: 50px; box-shadow: 0 5px 15px rgba(29,78,216,.35); cursor: pointer; transition: transform .2s, box-shadow .2s; }
         .lang-wrap:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(29,78,216,.5); }
