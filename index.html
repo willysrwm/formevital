@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"><link rel="icon" type="image/png" href="logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormeVital - Santé & Fitness | Guide & Avis</title>
-    <meta name="description" content="FormeVital - Votre guide complet pour la santé et le fitness. Avis, comparatifs et conseils pour une vie plus saine.">
+    <title>FormeVital - Santé, Fitness & Avis Produits | Guide 2026</title>
+    <meta name="description" content="FormeVital - Votre guide complet pour la santé, le fitness et nos avis honnêtes sur les meilleurs compléments alimentaires en 2026.">
     <style>
         :root { --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #10b981; --dark: #1e293b; --light: #f8fafc; --gray: #64748b; --white: #ffffff; --radius: 12px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,36 +32,45 @@
         .section { padding: 70px 0; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 15px; color: var(--dark); }
         .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 50px; font-size: 1.1rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s; }
-        .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
-        .product-image { height: 200px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-        .product-content { padding: 25px; }
-        .product-badge { display: inline-block; background: var(--secondary); color: var(--white); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
-        .product-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--dark); }
-        .product-description { color: var(--gray); margin-bottom: 20px; font-size: 0.95rem; }
-        .product-footer { display: flex; justify-content: space-between; align-items: center; }
-        .product-price { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
-        .product-link { background: var(--primary); color: var(--white); padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
-        .product-link:hover { background: var(--primary-dark); }
+        
+        /* À la une */
         .featured { padding: 70px 0; background: linear-gradient(135deg, #ecfdf5 0%, #f0f9ff 100%); }
         .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         .featured-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
         .featured-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.12); }
-        .featured-card img { width: 100%; height: 200px; object-fit: cover; }
         .featured-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
-        .featured-tag { display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 5px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; align-self: flex-start; }
+        .featured-tag { display: inline-block; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 5px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; align-self: flex-start; }
+        .featured-tag.new { background: linear-gradient(135deg, #10b981, #059669); }
         .featured-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--dark); }
         .featured-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; flex: 1; }
         .featured-link { color: var(--primary); font-weight: 600; }
+
+        /* Products / Review Icons */
+        .product-image { height: 200px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); display: flex; align-items: center; justify-content: center; font-size: 4.5rem; }
+        .product-image.review-prostavive { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .product-image.review-prodentim { background: linear-gradient(135deg, #065f46 0%, #10b981 100%); }
+        .product-image.review-femicore { background: linear-gradient(135deg, #831843 0%, #ec4899 100%); }
+        .product-image.review-brain { background: linear-gradient(135deg, #7c2d12 0%, #f97316 100%); }
+        .product-image.review-audifort { background: linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%); }
+
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .blog-card { background: var(--white); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s; }
+        .blog-card { background: var(--white); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
         .blog-card:hover { transform: translateY(-5px); }
         .blog-category { color: var(--secondary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; }
+        .blog-category.review { color: #d97706; }
         .blog-title { font-size: 1.25rem; margin-bottom: 12px; color: var(--dark); }
-        .blog-excerpt { color: var(--gray); font-size: 0.95rem; margin-bottom: 20px; }
+        .blog-excerpt { color: var(--gray); font-size: 0.95rem; margin-bottom: 20px; flex: 1; }
         .blog-link { color: var(--primary); text-decoration: none; font-weight: 600; }
         .blog-link:hover { text-decoration: underline; }
+        .blog-img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+        
+        .blog-icon { width: 100%; height: 180px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; font-size: 4rem; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+        .blog-icon.prostavive { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .blog-icon.prodentim { background: linear-gradient(135deg, #065f46 0%, #10b981 100%); }
+        .blog-icon.femicore { background: linear-gradient(135deg, #831843 0%, #ec4899 100%); }
+        .blog-icon.brain { background: linear-gradient(135deg, #7c2d12 0%, #f97316 100%); }
+        .blog-icon.audifort { background: linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%); }
+
         .newsletter { background: var(--dark); color: var(--white); padding: 60px 0; text-align: center; }
         .newsletter h2 { font-size: 2rem; margin-bottom: 15px; }
         .newsletter p { opacity: 0.8; margin-bottom: 30px; }
@@ -69,15 +78,11 @@
         .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
         .footer-links a { color: var(--gray); text-decoration: none; transition: color 0.3s; }
         .footer-links a:hover { color: var(--white); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .header-inner { flex-direction: column; gap: 15px; } nav { flex-wrap: wrap; justify-content: center; } .products-grid, .blog-grid, .featured-grid { grid-template-columns: 1fr; } }
-        .blog-img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .header-inner { flex-direction: column; gap: 15px; } nav { flex-wrap: wrap; justify-content: center; } .blog-grid, .featured-grid { grid-template-columns: 1fr; } }
         .logo img { height:85px !important; }
     </style>
 <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2586709');
 </script>
 </head>
@@ -88,8 +93,7 @@
                 <a href="#" class="logo"><img src="logo.png" alt="FormeVital" style="height:40px; border-radius:50%; vertical-align:middle; margin-right:8px;">Forme<span>Vital</span></a>
                 <nav>
                     <a href="#accueil">Accueil</a>
-                    <a href="#produits">Produits</a>
-                    <a href="#alaune">À la une</a>
+                    <a href="#alaune">Avis & Tests</a>
                     <a href="#blog">Blog</a>
                     <a href="#contact">Contact</a>
                     <div class="lang-switcher">
@@ -104,152 +108,146 @@
 
     <section class="hero" id="accueil">
         <div class="container">
-            <h1>Votre Guide Santé & Fitness</h1>
-            <p>Découvrez les meilleurs produits et conseils pour une vie plus saine et plus énergique.</p>
-            <a href="#produits" class="cta-button">Voir les Produits</a>
+            <h1>Votre Guide Santé, Fitness & Avis Produits</h1>
+            <p>Conseils basés sur la science et tests honnêtes des meilleurs compléments pour une vie plus saine.</p>
+            <a href="#alaune" class="cta-button">Voir nos Avis 2026</a>
         </div>
     </section>
 
-    <section class="section" id="produits">
-        <div class="container">
-            <h2 class="section-title">Top Produits Fitness</h2>
-            <p class="section-subtitle">Sélection testée et approuvée par nos experts</p>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">🏋️</div>
-                    <div class="product-content">
-                        <span class="product-badge">Best-seller</span>
-                        <h3 class="product-title">Tapis de Course Pro</h3>
-                        <p class="product-description">Tapis de course pliable avec 12 programmes intégrés. Idéal pour l'entraînement à domicile.</p>
-                        <div class="product-footer"><span class="product-price">299€</span><a href="#" class="product-link">Voir l'avis</a></div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">💪</div>
-                    <div class="product-content">
-                        <span class="product-badge">Nouveau</span>
-                        <h3 class="product-title">Pack Haltères Réglables</h3>
-                        <p class="product-description">Haltères réglables de 2 à 24kg. Parfait pour la musculation à la maison.</p>
-                        <div class="product-footer"><span class="product-price">189€</span><a href="#" class="product-link">Voir l'avis</a></div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🥤</div>
-                    <div class="product-content">
-                        <span class="product-badge">Populaire</span>
-                        <h3 class="product-title">Protéine Whey Premium</h3>
-                        <p class="product-description">Protéine de lactosérum haute qualité pour la récupération musculaire.</p>
-                        <div class="product-footer"><span class="product-price">45€</span><a href="#" class="product-link">Voir l'avis</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- 🌟 À LA UNE : Les 3 Meilleurs Avis Produits (High Ticket) -->
     <section class="featured" id="alaune">
         <div class="container">
-            <h2 class="section-title">🔥 À la une cette semaine</h2>
-            <p class="section-subtitle">Nos guides récents, basés sur la science, pour transformer votre santé</p>
+            <h2 class="section-title">🏆 Nos Avis & Tests Produits 2026</h2>
+            <p class="section-subtitle">Notre analyse honnête des compléments les plus populaires du moment</p>
             <div class="featured-grid">
-                <a href="article-jeune.html" class="featured-card">
-                    <img src="jeune1.jpg.png" alt="Jeûne intermittent">
+                <a href="article-prostavive.html" class="featured-card">
+                    <div class="product-image review-prostavive">🛡️</div>
                     <div class="featured-content">
-                        <span class="featured-tag">🕐 Nouveau</span>
-                        <h3>Jeûne intermittent : miracle ou pas ?</h3>
-                        <p>16/8, insuline, autophagie : ce que dit vraiment la science — et la méthode progressive pour bien débuter.</p>
-                        <span class="featured-link">Lire l'article →</span>
+                        <span class="featured-tag">⭐ Top Avis Homme</span>
+                        <h3>ProstaVive : Nuit complètes et prostate</h3>
+                        <p>Envies fréquentes d'uriner la nuit ? Notre analyse de cette formule naturelle pour hommes 50+.</p>
+                        <span class="featured-link">Lire notre avis complet →</span>
                     </div>
                 </a>
-                <a href="article-the-vert.html" class="featured-card">
-                    <img src="the-vert.jpg.png" alt="Thé vert et perte de poids">
+                <a href="article-prodentim.html" class="featured-card">
+                    <div class="product-image review-prodentim">🦷</div>
                     <div class="featured-content">
-                        <span class="featured-tag">🍵 Nouveau</span>
-                        <h3>Thé vert : brûle-graisse naturel ?</h3>
-                        <p>EGCG, caféine, métabolisme : ce que dit vraiment la science sur le thé vert et la perte de poids.</p>
-                        <span class="featured-link">Lire l'article →</span>
+                        <span class="featured-tag">⭐ Top Avis Santé</span>
+                        <h3>ProDentim : Le probiotique buccal</h3>
+                        <p>La science du microbiote oral pour les gencives et l'haleine. Que vaut-il vraiment ?</p>
+                        <span class="featured-link">Lire notre avis complet →</span>
                     </div>
                 </a>
-                <a href="article-marche.html" class="featured-card">
-                    <img src="marche.jpg.png" alt="Marche et métabolisme">
+                <a href="article-femicore.html" class="featured-card">
+                    <div class="product-image review-femicore">🌸</div>
                     <div class="featured-content">
-                        <span class="featured-tag">🚶 Nouveau</span>
-                        <h3>Marcher 30 min/jour : effets réels</h3>
-                        <p>Glycémie, calories, NEAT : voici ce que change vraiment la marche quotidienne pour votre métabolisme.</p>
-                        <span class="featured-link">Lire l'article →</span>
+                        <span class="featured-tag">⭐ Top Avis Femme</span>
+                        <h3>FemiCore : Santé urinaire féminine</h3>
+                        <p>Fuites et envies pressantes : les solutions naturelles et notre test de la formule FemiCore.</p>
+                        <span class="featured-link">Lire notre avis complet →</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- 📚 BLOG : Tous les articles (14 au total) -->
     <section class="section" id="blog" style="background: var(--white);">
         <div class="container">
-            <h2 class="section-title">Derniers Articles</h2>
-            <p class="section-subtitle">Conseils et guides pour votre santé</p>
+            <h2 class="section-title">Derniers Articles & Guides</h2>
+            <p class="section-subtitle">Tous nos conseils santé, nutrition et tests produits</p>
             <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="jeune1.jpg.png" alt="Jeûne intermittent" class="blog-img">
+                
+                <!-- 5 Avis Produits (Nouveaux) -->
+                <a href="article-audifort.html" class="blog-card">
+                    <div class="blog-icon audifort">👂</div>
+                    <div class="blog-category review">Avis Produit</div>
+                    <h3 class="blog-title">Audifort : Acouphènes et santé auditive</h3>
+                    <p class="blog-excerpt">Sifflements et bourdonnements : que vaut cette solution naturelle pour apaiser le nerf auditif ?</p>
+                    <span class="blog-link">Lire l'avis →</span>
+                </a>
+
+                <a href="article-brain-song.html" class="blog-card">
+                    <div class="blog-icon brain">🧠</div>
+                    <div class="blog-category review">Avis Produit</div>
+                    <h3 class="blog-title">The Brain Song : Mémoire et concentration</h3>
+                    <p class="blog-excerpt">Le programme audio qui fait fureur pour soutenir la mémoire. Vraie piste ou gadget ?</p>
+                    <span class="blog-link">Lire l'avis →</span>
+                </a>
+
+                <!-- Guides Récents -->
+                <a href="article-jeune.html" class="blog-card">
+                    <div class="blog-icon" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); color: #1e293b;">🕐</div>
                     <div class="blog-category">Nutrition</div>
-                    <h3 class="blog-title">Jeûne intermittent : méthode miracle ou restriction calorique ?</h3>
-                    <p class="blog-excerpt">16/8, 5:2, fenêtre alimentaire : ce que dit vraiment la science, pour qui c'est déconseillé, et comment bien débuter...</p>
-                    <a href="article-jeune.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
+                    <h3 class="blog-title">Jeûne intermittent : miracle ou restriction ?</h3>
+                    <p class="blog-excerpt">16/8, 5:2 : ce que dit vraiment la science et comment bien débuter sans se tromper.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-the-vert.html" class="blog-card">
                     <img src="the-vert.jpg.png" alt="Thé vert" class="blog-img">
                     <div class="blog-category">Nutrition</div>
-                    <h3 class="blog-title">Thé vert : brûle-graisse naturel ou effet de mode ?</h3>
-                    <p class="blog-excerpt">EGCG, caféine, métabolisme : on décrypte ce que dit vraiment la science sur le thé vert et la perte de poids.</p>
-                    <a href="article-the-vert.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
+                    <h3 class="blog-title">Thé vert : brûle-graisse naturel ?</h3>
+                    <p class="blog-excerpt">EGCG, caféine, métabolisme : on décrypte ce que dit vraiment la science sur la perte de poids.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-marche.html" class="blog-card">
                     <img src="marche.jpg.png" alt="Marche quotidienne" class="blog-img">
                     <div class="blog-category">Fitness</div>
-                    <h3 class="blog-title">Marcher 30 min/jour : effets réels sur le métabolisme</h3>
+                    <h3 class="blog-title">Marcher 30 min/jour : effets réels</h3>
                     <p class="blog-excerpt">Calories, glycémie, NEAT : voici ce que change vraiment la marche quotidienne pour votre corps.</p>
-                    <a href="article-marche.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-proteines.html" class="blog-card">
                     <img src="proteines.jpg.png" alt="Petit-déjeuner protéiné" class="blog-img">
                     <div class="blog-category">Nutrition</div>
                     <h3 class="blog-title">Protéines au petit-déjeuner : la fin des fringales</h3>
-                    <p class="blog-excerpt">Faim à 11h ? Le problème n'est pas votre volonté mais votre petit-déjeuner. La solution : 20-30g de protéines.</p>
-                    <a href="article-proteines.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
-                    <img src="tapis1.jpg" alt="Tapis de course pliable" class="blog-img">
-                    <div class="blog-category">Équipement</div>
-                    <h3 class="blog-title">Top 3 des Tapis de Course Pliables en 2026</h3>
-                    <p class="blog-excerpt">Notre comparatif complet des meilleurs tapis de course pour la maison : critères de choix, avis et meilleurs rapports qualité/prix...</p>
-                    <a href="article-tapis.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
-                    <img src="whey1.jpg" alt="Shake de protéine whey" class="blog-img">
-                    <div class="blog-category">Nutrition</div>
-                    <h3 class="blog-title">Comment Bien Choisir sa Protéine Whey en 2026 ?</h3>
-                    <p class="blog-excerpt">Whey concentrée, isolate ou native ? Découvrez notre guide complet et notre top 3 des meilleures protéines pour vos objectifs...</p>
-                    <a href="article-whey.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
+                    <p class="blog-excerpt">Faim à 11h ? Le problème n'est pas votre volonté mais votre petit-déjeuner. La solution.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <!-- Anciens Guides -->
+                <a href="article-sommeil.html" class="blog-card">
                     <img src="sommeil1.jpg" alt="Sommeil réparateur" class="blog-img">
                     <div class="blog-category">Bien-être</div>
-                    <h3 class="blog-title">Le Sommeil, Clé de la Performance : Le Guide Complet</h3>
-                    <p class="blog-excerpt">Hormone de croissance, récupération, concentration : découvrez pourquoi vos nuits décident de vos résultats.</p>
-                    <a href="article-sommeil.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
-                    <img src="joints1.jpg" alt="Course à pied et articulations" class="blog-img">
-                    <div class="blog-category">Récupération</div>
-                    <h3 class="blog-title">Douleurs Articulaires et Sport : Comment les Protéger ?</h3>
-                    <p class="blog-excerpt">Genoux, épaules, hanches : pourquoi ils grincent et les réflexes concrets pour les protéger tout en restant actif...</p>
-                    <a href="article-joints.html" class="blog-link">Lire la suite →</a>
-                </div>
-                <div class="blog-card">
+                    <h3 class="blog-title">Le Sommeil, Clé de la Performance</h3>
+                    <p class="blog-excerpt">Hormone de croissance, récupération : découvrez pourquoi vos nuits décident de vos résultats.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-cafe.html" class="blog-card">
                     <img src="cafe1.jpg" alt="Café du matin" class="blog-img">
                     <div class="blog-category">Nutrition</div>
-                    <h3 class="blog-title">Le "Coffee Hack" du Matin : Vraie Méthode ou Effet de Mode ?</h3>
-                    <p class="blog-excerpt">Et si ton café du matin pouvait faire plus que te réveiller ? Voici ce que dit la science sur le métabolisme et le café...</p>
-                    <a href="article-cafe.html" class="blog-link">Lire la suite →</a>
-                </div>
+                    <h3 class="blog-title">Le "Coffee Hack" du Matin</h3>
+                    <p class="blog-excerpt">Et si ton café du matin pouvait faire plus que te réveiller ? La science du métabolisme.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-tapis.html" class="blog-card">
+                    <img src="tapis1.jpg" alt="Tapis de course" class="blog-img">
+                    <div class="blog-category">Équipement</div>
+                    <h3 class="blog-title">Top 3 des Tapis de Course Pliables</h3>
+                    <p class="blog-excerpt">Notre comparatif complet pour la maison : critères, avis et meilleurs rapports qualité/prix.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-whey.html" class="blog-card">
+                    <img src="whey1.jpg" alt="Whey" class="blog-img">
+                    <div class="blog-category">Nutrition</div>
+                    <h3 class="blog-title">Bien Choisir sa Protéine Whey</h3>
+                    <p class="blog-excerpt">Concentrée, isolate ou native ? Notre guide et top 3 des meilleures protéines.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
+
+                <a href="article-joints.html" class="blog-card">
+                    <img src="joints1.jpg" alt="Articulations" class="blog-img">
+                    <div class="blog-category">Récupération</div>
+                    <h3 class="blog-title">Douleurs Articulaires et Sport</h3>
+                    <p class="blog-excerpt">Genoux, épaules : pourquoi ils grincent et les réflexes pour les protéger.</p>
+                    <span class="blog-link">Lire la suite →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -257,7 +255,7 @@
     <section class="newsletter">
         <div class="container">
             <h2>Restez Informé</h2>
-            <p>Recevez nos meilleurs conseils et offres exclusives</p>
+            <p>Recevez nos meilleurs conseils, tests et offres exclusives</p>
             <div class="ml-embedded" data-form="tMEKXF"></div>
         </div>
     </section>
