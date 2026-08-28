@@ -332,5 +332,18 @@
         });
     </script>
 <script src="ga.js"></script>
+    <script>
+(function(){
+  var t = setInterval(function(){
+    var s = document.querySelector('.ml-form-successBody');
+    if(s && s.offsetHeight > 0){
+      clearInterval(t);
+      setTimeout(function(){
+        window.scrollTo({top:0, behavior:'smooth'});
+      }, 4000);
+    }
+  }, 800);
+})();
+</script>
 </body>
 </html>
