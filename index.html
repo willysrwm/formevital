@@ -76,6 +76,11 @@
         .footer-links a:hover { color: var(--white); }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .header-inner { flex-direction: column; gap: 15px; } nav { flex-wrap: wrap; justify-content: center; } .blog-grid, .featured-grid { grid-template-columns: 1fr; } }
         .logo img { height:85px !important; }
+        .sommaire { padding: 35px 0 5px; }
+        .sommaire h2 { text-align: center; font-size: 1.3rem; margin-bottom: 18px; color: var(--dark); }
+        .sommaire-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; max-width: 950px; margin: 0 auto; padding: 0 20px; }
+        .sommaire-grid a { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; font-size: .9rem; color: var(--dark); text-decoration: none; font-weight: 600; }
+        .sommaire-grid a:hover { border-color: var(--green); color: var(--green); }
     </style>
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
@@ -151,7 +156,27 @@
             </div>
         </div>
     </section>
-
+    <section class="sommaire">
+        <h2>📚 Sommaire express — aiza no alehanao ?</h2>
+        <div class="sommaire-grid">
+            <a href="article-stress.html">🧘 Stress</a>
+            <a href="article-maigrir-sans-sport.html">⚖️ Maigrir sans sport</a>
+            <a href="article-sommeil.html">😴 Sommeil</a>
+            <a href="article-marche.html">🚶 Marche</a>
+            <a href="article-joints.html">🦴 Articulations</a>
+            <a href="article-the-vert.html">🍵 Thé vert</a>
+            <a href="article-cafe.html">☕ Café</a>
+            <a href="article-proteines.html">🥚 Protéines</a>
+            <a href="article-whey.html">💪 Whey</a>
+            <a href="article-tapis.html">🏃 Tapis</a>
+            <a href="article-jeune.html">⏳ Jeûne</a>
+            <a href="article-prodentim.html">🦷 Test ProDentim</a>
+            <a href="article-femicore.html">🌸 Test FemiCore</a>
+            <a href="article-brain-song.html">🧠 Test Brain Song</a>
+            <a href="article-audifort.html">👂 Test Audifort</a>
+            <a href="article-prostavive.html">🛡️ Test ProstaVive</a>
+        </div>
+    </section>
     <section class="section" id="blog" style="background: var(--white);">
         <div class="container">
             <h2 class="section-title" data-i18n="blog_title">Derniers Articles & Guides</h2>
@@ -332,18 +357,5 @@
         });
     </script>
 <script src="ga.js"></script>
-    <script>
-(function(){
-  var t = setInterval(function(){
-    var s = document.querySelector('.ml-form-successBody');
-    if(s && s.offsetHeight > 0){
-      clearInterval(t);
-      setTimeout(function(){
-        window.scrollTo({top:0, behavior:'smooth'});
-      }, 4000);
-    }
-  }, 800);
-})();
-</script>
 </body>
 </html>
