@@ -427,15 +427,10 @@
 </script>
     <script>
 (function(){
-  var m={'article-stress.html':'ch_stress','article-maigrir-sans-sport.html':'ch_maigrir','article-sommeil.html':'ch_sommeil','article-marche.html':'ch_marche','article-joints.html':'ch_joints','article-the-vert.html':'ch_thevert','article-cafe.html':'ch_cafe','article-proteines.html':'ch_proteines','article-whey.html':'ch_whey','article-tapis.html':'ch_tapis','article-jeune.html':'ch_jeune','article-prodentim.html':'ch_prodentim','article-femicore.html':'ch_femicore','article-brain-song.html':'ch_brainsong','article-audifort.html':'ch_audifort','article-prostavive.html':'ch_prostavive','article-berberine.html':'ch_berberine','article-neurovera.html':'ch_neurovera','article-adaptogenes.html':'ch_adaptogenes','article-wearables.html':'ch_wearables'};
-  document.querySelectorAll('.sommaire-grid a').forEach(function(a){
-    var k=m[a.getAttribute('href')]; if(k) a.setAttribute('data-i18n',k);
-  });
-  try{
-    var lang=document.documentElement.lang||'fr';
-    var t=(typeof i18n!=='undefined')?i18n[lang]:null;
-    if(t){document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(t[k])el.textContent=t[k];});}
-  }catch(e){}
+  var m={'article-stress.html':'ch_stress','article-maigrir-sans-sport.html':'ch_maigrir','article-sommeil.html':'ch_sommeil','article-marche.html':'ch_marche','article-joints.html':'ch_joints','article-the-vert.html':'ch_thevert','article-cafe.html':'ch_cafe','article-proteines':'ch_proteines','article-whey.html':'ch_whey','article-tapis.html':'ch_tapis','article-jeune.html':'ch_jeune','article-prodentim.html':'ch_prodentim','article-femicore.html':'ch_femicore','article-brain-song.html':'ch_brainsong','article-audifort.html':'ch_audifort','article-prostavive.html':'ch_prostavive','article-berberine.html':'ch_berberine','article-neurovera.html':'ch_neurovera','article-adaptogenes.html':'ch_adaptogenes','article-wearables.html':'ch_wearables'};
+  function tag(){document.querySelectorAll('.sommaire-grid a').forEach(function(a){var k=m[a.getAttribute('href')];if(k)a.setAttribute('data-i18n',k);});}
+  tag();
+  document.addEventListener('click',tag,true);
 })();
 </script>
 </body>
