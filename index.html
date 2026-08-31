@@ -81,6 +81,14 @@
         .sommaire-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; max-width: 950px; margin: 0 auto; padding: 0 20px; }
         .sommaire-grid a { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; font-size: .9rem; color: var(--dark); text-decoration: none; font-weight: 600; }
         .sommaire-grid a:hover { border-color: var(--green); color: var(--green); }
+            .cellulaire{background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:60px 0;color:#e2e8f0}
+        .cellulaire h2{text-align:center;color:#fff;font-size:2rem;margin-bottom:8px;border:none}
+        .ocs-sub{text-align:center;color:#a5b4fc;margin-bottom:30px}
+        .ocs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1000px;margin:0 auto;padding:0 20px}
+        .ocs-pillar{background:rgba(255,255,255,.06);border:1px solid rgba(165,180,252,.25);border-radius:14px;padding:20px}
+        .ocs-pillar h3{color:#fbbf24;margin-bottom:12px;font-size:1.1rem}
+        .ocs-pillar a{display:block;color:#e2e8f0;text-decoration:none;padding:8px 10px;border-radius:8px;margin-bottom:6px;background:rgba(255,255,255,.05)}
+        .ocs-pillar a:hover{background:rgba(165,180,252,.2);transform:translateX(4px)}
     </style>
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
@@ -179,6 +187,28 @@
             <a href="article-neurovera.html">🧠 NeuroVera</a>
         </div>
     </section>
+    <section class="cellulaire" id="cellulaire">
+    <h2 data-i18n="ocs_title">⚡ Optimisation Santé Cellulaire</h2>
+    <p class="ocs-sub" data-i18n="ocs_sub">Suppléments premium & biohacking — la science de la longévité, sans mythes.</p>
+    <div class="ocs-grid">
+        <div class="ocs-pillar">
+            <h3 data-i18n="pil_noot">🧠 Nootropiques</h3>
+            <a href="article-neurovera.html">NeuroVera : avis honnête 2026 →</a>
+            <a href="article-brain-song.html">Brain Song : test complet →</a>
+        </div>
+        <div class="ocs-pillar">
+            <h3 data-i18n="pil_adapt">🌿 Adaptogènes</h3>
+            <a href="article-adaptogenes.html">Ashwagandha & Rhodiola : le guide →</a>
+            <a href="article-stress.html">Stress chronique : 7 solutions →</a>
+            <a href="article-sommeil.html">Sommeil réparateur : protocole →</a>
+        </div>
+        <div class="ocs-pillar">
+            <h3 data-i18n="pil_wear">⌚ Wearables & Métabolisme</h3>
+            <a href="article-wearables.html">Trackers & montres : guide biohacking →</a>
+            <a href="article-berberine.html">Berbérine : « Ozempic naturel » ? →</a>
+        </div>
+    </div>
+</section>
     <section class="section" id="blog" style="background: var(--white);">
         <div class="container">
             <h2 class="section-title" data-i18n="blog_title">Derniers Articles & Guides</h2>
