@@ -27,3 +27,11 @@
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fix);}else{fix();}
 })();
+(function(){
+  function fix2(){
+    document.querySelectorAll('a.logo').forEach(function(a){
+      a.innerHTML='<img src="logo.png" alt="FormeVital"><span>Forme<em>Vital</em></span>';
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fix2);}else{fix2();}
+})();
