@@ -14,3 +14,8 @@
     }
   });
 })();
+
+(function(){
+  var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap';(document.head||document.documentElement).appendChild(l);
+  var s=document.createElement('style');s.textContent='.logo{font-family:"Great Vibes",cursive !important;font-size:2.6rem !important;font-weight:400 !important;letter-spacing:1px}.logo em{font-style:normal !important}';(document.head||document.documentElement).appendChild(s);
+})();
