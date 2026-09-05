@@ -364,49 +364,49 @@
                 <h2 data-i18n="news_title">🎁 Article Exclusif OFFERT</h2>
                 <p data-i18n="news_sub">Inscrivez-vous et recevez immédiatement « Le Rituel du Thé Minceur » + nos guides hebdo.</p>
                 <style>
-                    .fv-news-form input[type="email"] {
-                        width: 100%; padding: 12px 15px; border: 1px solid #ddd;
-                        border-radius: 6px; font-size: 15px; margin-bottom: 10px;
-                        box-sizing: border-box;
-                    }
-                    .fv-news-form button {
-                        width: 100%; padding: 13px; background: #10b981; color: #fff;
-                        border: none; border-radius: 6px; font-size: 15px; font-weight: 700;
-                        cursor: pointer; transition: background 0.3s;
-                    }
-                    .fv-news-form button:hover { background: #059669; }
-                    .fv-news-success {
-                        display: none; padding: 15px; background: #ecfdf5;
-                        border: 1px solid #a7f3d0; border-radius: 6px; color: #065f46;
-                    }
+                    #mlb2-45601433 input[type="email"]{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:6px;font-size:15px;margin-bottom:10px;box-sizing:border-box}
+                    #mlb2-45601433 button{width:100%;padding:13px;background:#10b981;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
+                    #mlb2-45601433 button:hover{background:#059669}
+                    #mlb2-45601433 .ml-form-successContent h4{color:#065f46;margin:0 0 6px 0}
+                    #mlb2-45601433 .ml-form-successContent p{color:#065f46;margin:0}
                 </style>
-                <form class="fv-news-form" action="https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe" method="post" id="fv-newsletter-form">
-                    <input type="hidden" name="ml-submit" value="1">
-                    <input type="hidden" name="anticsrf" value="true">
-                    <input type="email" name="fields[email]" placeholder="Votre email" required aria-label="Email">
-                    <button type="submit" data-i18n="news_btn">Recevoir mon guide gratuit →</button>
-                </form>
-                <div class="fv-news-success" id="fv-news-success">
-                    ✅ Merci ! Vérifiez votre boîte mail (et les spams) pour confirmer votre inscription.
+                <div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe" method="post">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Votre email..." autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary" data-i18n="news_btn">Recevoir mon guide gratuit →</button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display:none">
+                                <div class="ml-form-successContent">
+                                    <h4>🎉 Merci ! Thank you!</h4>
+                                    <p>Vérifiez votre boîte mail (et les spams) pour confirmer votre inscription.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <script>
-                document.getElementById('fv-newsletter-form').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    var form = this;
-                    var btn = form.querySelector('button');
-                    btn.disabled = true; btn.textContent = 'Envoi...';
-                    var data = new FormData(form);
-                    fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
-                        .then(function() {
-                            form.style.display = 'none';
-                            document.getElementById('fv-news-success').style.display = 'block';
-                        })
-                        .catch(function() {
-                            form.style.display = 'none';
-                            document.getElementById('fv-news-success').style.display = 'block';
-                        });
-                });
+                function ml_webform_success_45601433(){
+                    var r=document.querySelector('#mlb2-45601433 .row-success');
+                    var f=document.querySelector('#mlb2-45601433 .row-form');
+                    if(r)r.style.display='block';
+                    if(f)f.style.display='none';
+                }
                 </script>
+                <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
             </div>
         </div>
     </section>
