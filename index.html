@@ -369,6 +369,7 @@
                     #mlb2-45601433 button:hover{background:#059669}
                                         #mlb2-45601433 .ml-form-successContent h4{color:#ffffff;margin:0 0 10px 0;font-size:1.5rem;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.25)}
                     #mlb2-45601433 .ml-form-successContent p{color:#eafff9;margin:0 0 6px 0;font-size:1.05rem;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+                    #mlb2-45601433 .row-success{min-height:150px}ext-shadow:0 1px 2px rgba(0,0,0,.2)}
                 </style>
                 <div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433">
                     <div class="ml-form-align-center">
@@ -399,12 +400,13 @@
                         </div>
                     </div>
                 </div>
-                                <script>
+                                                <script>
                 function ml_webform_success_45601433(){
                     var r=document.querySelector('#mlb2-45601433 .row-success');
                     var f=document.querySelector('#mlb2-45601433 .row-form');
                     if(r)r.style.display='block';
                     if(f)f.style.display='none';
+                    if(r)r.scrollIntoView({behavior:'smooth',block:'center'});
                     setTimeout(function(){
                         var b=document.querySelector('#blog')||document.querySelector('#avis');
                         if(b){b.scrollIntoView({behavior:'smooth',block:'start'});}
