@@ -358,10 +358,11 @@
     </section>
 
       <section class="newsletter" id="newsletter">
-    <div id="fv-toast" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9999;background:#065f46;color:#ffffff;padding:16px 22px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.35);max-width:92%;text-align:center;font-size:1rem;line-height:1.6">
+    <div id="fv-toast" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9999;background:#065f46;color:#ffffff;padding:16px 26px 14px 22px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.35);max-width:92%;text-align:center;font-size:1rem;line-height:1.6">
+        <span onclick="document.getElementById('fv-toast').style.display='none'" style="position:absolute;top:4px;right:10px;cursor:pointer;font-weight:800">✕</span>
         🎉 <strong>Thank you! Merci! ¡Gracias!</strong><br>
         Please check your inbox for confirmation (+ spam folder).<br>
-        <a href="#blog" style="color:#ffffff;font-weight:800;text-decoration:underline">👉 En attendant : découvrez nos Avis & Tests 2026 →</a>
+        <a href="#blog" onclick="document.getElementById('fv-toast').style.display='none'" style="color:#ffffff;font-weight:800;text-decoration:underline">👉 En attendant : découvrez nos Avis & Tests 2026 →</a>
     </div>
     <div class="container">
         <div class="newsletter-card">
@@ -372,9 +373,6 @@
                 #mlb2-45601433 input[type="email"]{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:6px;font-size:15px;margin-bottom:10px;box-sizing:border-box}
                 #mlb2-45601433 button{width:100%;padding:13px;background:#10b981;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
                 #mlb2-45601433 button:hover{background:#059669}
-                #mlb2-45601433 .ml-form-successContent h4{color:#ffffff;margin:0 0 10px 0;font-size:1.5rem;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.25)}
-                #mlb2-45601433 .ml-form-successContent p{color:#eafff9;margin:0 0 6px 0;font-size:1.05rem;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.2)}
-                #mlb2-45601433 .row-success{min-height:150px}
             </style>
             <div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433">
                 <div class="ml-form-align-center">
@@ -395,47 +393,32 @@
                                 <input type="hidden" name="anticsrf" value="true">
                             </form>
                         </div>
-                        <div class="ml-form-successBody row-success" style="display:none">
-                            <div class="ml-form-successContent">
-                                <h4>🎉 Thank you! Merci! ¡Gracias!</h4>
-                                <p>Please check your inbox for confirmation and you will receive another email titled "Welcome! Your 3 VitalForm guides + <strong>GIFT</strong>".</p>
-                                <p>If you don't see it, check your spam folder.</p>
-                                <p style="margin-top:14px"><a href="#blog" style="color:#ffffff;font-weight:800;text-decoration:underline;font-size:1.1rem">👉 En attendant : découvrez nos Avis & Tests 2026 →</a></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <script>
-            (function(){
-                var form = document.querySelector('#mlb2-45601433 form');
-                if(!form) return;
-                form.addEventListener('submit', function(e){
-                    e.preventDefault();
-                    var em = form.querySelector('input[type="email"]').value;
-                    if(!em || em.indexOf('@')<0) return;
-                    var s = document.createElement('script');
-                    s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
-                    document.body.appendChild(s);
-                                                            setTimeout(function(){
-                        var t = document.getElementById('fv-toast');
-                        if(t){ t.style.display='block'; }
-                    }, 1200);
-                });
-            })();
-            </script>
         </div>
     </div>
-</section> var b=document.querySelector('#blog')||document.querySelector('#avis');
-                        if(b){b.scrollIntoView({behavior:'smooth',block:'start'});}
-                        else{window.scrollTo({top:0,behavior:'smooth'});}
-                    },10000);
-                }
-                </script>
-                <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
-            </div>
-        </div>
-    </section>
+    <script>
+    (function(){
+        var form = document.querySelector('#mlb2-45601433 form');
+        if(!form) return;
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var em = form.querySelector('input[type="email"]').value;
+            if(!em || em.indexOf('@')<0) return;
+            var s = document.createElement('script');
+            s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
+            document.body.appendChild(s);
+            setTimeout(function(){
+                var t = document.getElementById('fv-toast');
+                if(t){ t.style.display='block'; }
+                form.querySelector('input[type="email"]').value = '';
+                setTimeout(function(){ if(t){ t.style.display='none'; } }, 15000);
+            }, 1200);
+        });
+    })();
+    </script>
+</section> 
 
     <footer id="contact">
         <div class="container">
