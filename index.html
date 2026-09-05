@@ -399,12 +399,17 @@
                         </div>
                     </div>
                 </div>
-                <script>
+                                <script>
                 function ml_webform_success_45601433(){
                     var r=document.querySelector('#mlb2-45601433 .row-success');
                     var f=document.querySelector('#mlb2-45601433 .row-form');
                     if(r)r.style.display='block';
                     if(f)f.style.display='none';
+                    setTimeout(function(){
+                        var b=document.querySelector('#blog')||document.querySelector('#avis');
+                        if(b){b.scrollIntoView({behavior:'smooth',block:'start'});}
+                        else{window.scrollTo({top:0,behavior:'smooth'});}
+                    },10000);
                 }
                 </script>
                 <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
