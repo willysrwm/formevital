@@ -357,7 +357,7 @@
         </div>
     </section>
 
-       <section class="newsletter" id="newsletter">
+      <section class="newsletter" id="newsletter">
         <div class="container">
             <div class="newsletter-card">
                 <div style="font-size:2.6rem; margin-bottom:8px;">📬</div>
@@ -367,9 +367,9 @@
                     #mlb2-45601433 input[type="email"]{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:6px;font-size:15px;margin-bottom:10px;box-sizing:border-box}
                     #mlb2-45601433 button{width:100%;padding:13px;background:#10b981;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
                     #mlb2-45601433 button:hover{background:#059669}
-                                        #mlb2-45601433 .ml-form-successContent h4{color:#ffffff;margin:0 0 10px 0;font-size:1.5rem;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+                    #mlb2-45601433 .ml-form-successContent h4{color:#ffffff;margin:0 0 10px 0;font-size:1.5rem;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.25)}
                     #mlb2-45601433 .ml-form-successContent p{color:#eafff9;margin:0 0 6px 0;font-size:1.05rem;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.2)}
-                    #mlb2-45601433 .row-success{min-height:150px}ext-shadow:0 1px 2px rgba(0,0,0,.2)}
+                    #mlb2-45601433 .row-success{min-height:150px;display:none;padding:20px}
                 </style>
                 <div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433">
                     <div class="ml-form-align-center">
@@ -392,7 +392,7 @@
                             </div>
                             <div class="ml-form-successBody row-success" style="display:none">
                                 <div class="ml-form-successContent">
-                                                                        <h4>🎉 Thank you! Merci! ¡Gracias!</h4>
+                                    <h4>🎉 Thank you! Merci! ¡Gracias!</h4>
                                     <p>Please check your inbox for confirmation and you will receive another email titled "Welcome! Your 3 VitalForm guides + <strong>GIFT</strong>".</p>
                                     <p>If you don't see it, check your spam folder.</p>
                                 </div>
@@ -400,15 +400,26 @@
                         </div>
                     </div>
                 </div>
-                                                <script>
-                function ml_webform_success_45601433(){
-                    var r=document.querySelector('#mlb2-45601433 .row-success');
-                    var f=document.querySelector('#mlb2-45601433 .row-form');
-                    if(r)r.style.display='block';
-                    if(f)f.style.display='none';
-                    if(r)r.scrollIntoView({behavior:'smooth',block:'center'});
+                <script>
+                window.ml_webform_success_45601433 = function(){
+                    var r = document.querySelector('#mlb2-45601433 .row-success');
+                    var f = document.querySelector('#mlb2-45601433 .row-form');
+                    if(r){ r.style.display='block'; }
+                    if(f){ f.style.display='none'; }
                     setTimeout(function(){
-                        var b=document.querySelector('#blog')||document.querySelector('#avis');
+                        if(r) r.scrollIntoView({behavior:'smooth',block:'center'});
+                    }, 50);
+                    setTimeout(function(){
+                        var b = document.querySelector('#blog') || document.querySelector('#avis');
+                        if(b){ b.scrollIntoView({behavior:'smooth',block:'start'}); }
+                        else{ window.scrollTo({top:0,behavior:'smooth'}); }
+                    }, 10000);
+                };
+                </script>
+                <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
+            </div>
+        </div>
+    </section> var b=document.querySelector('#blog')||document.querySelector('#avis');
                         if(b){b.scrollIntoView({behavior:'smooth',block:'start'});}
                         else{window.scrollTo({top:0,behavior:'smooth'});}
                     },10000);
