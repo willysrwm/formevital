@@ -99,10 +99,7 @@
          .logo{font-family:'Great Vibes',cursive;font-size:3rem;font-weight:400;letter-spacing:1px}
         .logo em{font-style:normal}
     </style>
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2586709');
-</script>
+
 </head>
 <body>
     <header>
@@ -366,7 +363,50 @@
                 <div style="font-size:2.6rem; margin-bottom:8px;">📬</div>
                 <h2 data-i18n="news_title">🎁 Article Exclusif OFFERT</h2>
                 <p data-i18n="news_sub">Inscrivez-vous et recevez immédiatement « Le Rituel du Thé Minceur » + nos guides hebdo.</p>
-                <div class="ml-embedded" data-form="tMEKXF"></div>
+                <style>
+                    .fv-news-form input[type="email"] {
+                        width: 100%; padding: 12px 15px; border: 1px solid #ddd;
+                        border-radius: 6px; font-size: 15px; margin-bottom: 10px;
+                        box-sizing: border-box;
+                    }
+                    .fv-news-form button {
+                        width: 100%; padding: 13px; background: #10b981; color: #fff;
+                        border: none; border-radius: 6px; font-size: 15px; font-weight: 700;
+                        cursor: pointer; transition: background 0.3s;
+                    }
+                    .fv-news-form button:hover { background: #059669; }
+                    .fv-news-success {
+                        display: none; padding: 15px; background: #ecfdf5;
+                        border: 1px solid #a7f3d0; border-radius: 6px; color: #065f46;
+                    }
+                </style>
+                <form class="fv-news-form" action="https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe" method="post" id="fv-newsletter-form">
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <input type="email" name="fields[email]" placeholder="Votre email" required aria-label="Email">
+                    <button type="submit" data-i18n="news_btn">Recevoir mon guide gratuit →</button>
+                </form>
+                <div class="fv-news-success" id="fv-news-success">
+                    ✅ Merci ! Vérifiez votre boîte mail (et les spams) pour confirmer votre inscription.
+                </div>
+                <script>
+                document.getElementById('fv-newsletter-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var form = this;
+                    var btn = form.querySelector('button');
+                    btn.disabled = true; btn.textContent = 'Envoi...';
+                    var data = new FormData(form);
+                    fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
+                        .then(function() {
+                            form.style.display = 'none';
+                            document.getElementById('fv-news-success').style.display = 'block';
+                        })
+                        .catch(function() {
+                            form.style.display = 'none';
+                            document.getElementById('fv-news-success').style.display = 'block';
+                        });
+                });
+                </script>
             </div>
         </div>
     </section>
