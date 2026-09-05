@@ -412,7 +412,8 @@
                     var s = document.createElement('script');
                     s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
                     document.body.appendChild(s);
-                    setTimeout(function(){
+                                        setTimeout(function(){
+                        if(document.activeElement){ document.activeElement.blur(); }
                         var r = document.querySelector('#mlb2-45601433 .row-success');
                         var f = document.querySelector('#mlb2-45601433 .row-form');
                         if(r){ r.style.display='block'; }
