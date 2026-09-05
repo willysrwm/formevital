@@ -358,6 +358,11 @@
     </section>
 
       <section class="newsletter" id="newsletter">
+    <div id="fv-toast" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9999;background:#065f46;color:#ffffff;padding:16px 22px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.35);max-width:92%;text-align:center;font-size:1rem;line-height:1.6">
+        🎉 <strong>Thank you! Merci! ¡Gracias!</strong><br>
+        Please check your inbox for confirmation (+ spam folder).<br>
+        <a href="#blog" style="color:#ffffff;font-weight:800;text-decoration:underline">👉 En attendant : découvrez nos Avis & Tests 2026 →</a>
+    </div>
     <div class="container">
         <div class="newsletter-card">
             <div style="font-size:2.6rem; margin-bottom:8px;">📬</div>
@@ -412,12 +417,9 @@
                     var s = document.createElement('script');
                     s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
                     document.body.appendChild(s);
-                                        setTimeout(function(){
-                        if(document.activeElement){ document.activeElement.blur(); }
-                        var r = document.querySelector('#mlb2-45601433 .row-success');
-                        var f = document.querySelector('#mlb2-45601433 .row-form');
-                        if(r){ r.style.display='block'; }
-                        if(f){ f.style.display='none'; }
+                                                            setTimeout(function(){
+                        var t = document.getElementById('fv-toast');
+                        if(t){ t.style.display='block'; }
                     }, 1200);
                 });
             })();
