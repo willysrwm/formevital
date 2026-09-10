@@ -35,3 +35,41 @@
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fix2);}else{fix2();}
 })();
+/* ===== FV NEWSLETTER POPUP ===== */
+(function(){
+  var KEY='fvNewsPop';
+  function until(){ try{ return parseInt(localStorage.getItem(KEY)||'0',10); }catch(e){ return 0; } }
+  function lock(ms){ try{ localStorage.setItem(KEY,String(Date.now()+ms)); }catch(e){} }
+  if(Date.now()<until()) return;
+  var html='<div id="fvModal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:99999;align-items:center;justify-content:center;padding:20px">'
+  +'<div style="position:relative;background:#fff;border-radius:18px;max-width:440px;width:100%;padding:34px 26px 28px;text-align:center;box-shadow:0 25px 70px rgba(0,0,0,.35);font-family:Segoe UI,system-ui,sans-serif">'
+  +'<span id="fvModalX" style="position:absolute;top:10px;right:14px;font-size:22px;line-height:1;cursor:pointer;color:#94a3b8;font-weight:700;display:none">&times;</span>'
+  +'<div style="font-size:2.4rem">🎁</div>'
+  +'<h3 style="margin:8px 0 6px;color:#1e293b;font-size:1.35rem">Article Exclusif OFFERT</h3>'
+  +'<p style="color:#64748b;font-size:.95rem;margin:0 0 16px">Recevez immédiatement <strong>« Le Rituel du Thé Minceur »</strong> + nos guides hebdo + le GIFT de bienvenue.</p>'
+  +'<form id="fvModalForm" style="display:flex;flex-direction:column;gap:10px">'
+  +'<input id="fvModalEmail" type="email" required placeholder="Votre email..." style="padding:13px 15px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px">'
+  +'<button type="submit" style="padding:13px;background:#10b981;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer">Recevoir mon guide gratuit →</button>'
+  +'</form>'
+  +'<p id="fvModalOk" style="display:none;color:#059669;font-weight:700;margin:14px 0 0">🎉 Merci ! Vérifiez votre boîte mail (+ spams) pour confirmer.</p>'
+  +'<p style="color:#94a3b8;font-size:.75rem;margin:12px 0 0">Pas de spam. Désinscription en 1 clic.</p>'
+  +'</div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+  var m=document.getElementById('fvModal');
+  setTimeout(function(){ m.style.display='flex'; },1500);
+  setTimeout(function(){ var x=document.getElementById('fvModalX'); if(x) x.style.display='block'; },8000);
+  document.getElementById('fvModalX').onclick=function(){ m.style.display='none'; lock(7*864e5); };
+  m.addEventListener('click',function(e){ if(e.target===m){ m.style.display='none'; lock(7*864e5); } });
+  document.getElementById('fvModalForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var em=document.getElementById('fvModalEmail').value;
+    if(!em||em.indexOf('@')<0) return;
+    var s=document.createElement('script');
+    s.src='https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D='+encodeURIComponent(em)+'&ml-submit=1&anticsrf=true';
+    document.body.appendChild(s);
+    document.getElementById('fvModalForm').style.display='none';
+    document.getElementById('fvModalOk').style.display='block';
+    lock(365*864e5);
+    setTimeout(function(){ m.style.display='none'; },4000);
+  });
+})();
