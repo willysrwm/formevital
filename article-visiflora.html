@@ -8,30 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="FormeVital" class="logo-img">
-                <span class="logo-text">FormeVital</span>
-            </a>
-            <nav class="main-nav">
-                <a href="index.html#blog" data-i18n="nav_blog">Blog</a>
-                <a href="index.html#biohacking" data-i18n="nav_biohacking">Biohacking</a>
-                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
-                <div class="lang-selector">
-                    <button class="lang-btn" id="langBtn">
-                        <span id="langFlag">🇬🇧</span>
-                        <span id="langName">English</span> ▾
-                    </button>
-                    <div class="lang-dropdown" id="langDropdown">
-                        <button class="lang-option" data-lang="en">🇬🇧 English</button>
-                        <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
-                        <button class="lang-option" data-lang="mg">🇲🇬 Malagasy</button>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    
+<header style="background:white; border-bottom:1px solid #e2e8f0; padding:15px 0;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 20px; display:flex; justify-content:space-between; align-items:center;">
+        <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+            <!-- Logo Image (60px) -->
+            <img src="logo.png" alt="FormeVital" style="height:60px; width:auto;">
+            
+            <!-- Logo Text (Cursive) -->
+            <span style="font-family:'Dancing Script', 'Brush Script MT', cursive; font-size:2.5rem; background:linear-gradient(135deg, #2563eb, #10b981); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:bold;">
+                FormeVital
+            </span>
+        </a>
+        
+        <nav>
+            <a href="index.html#blog" style="color:#475569; text-decoration:none; margin-left:20px;">Blog</a>
+            <a href="index.html#contact" style="color:#475569; text-decoration:none; margin-left:20px;">Contact</a>
+        </nav>
+    </div>
+</header>
 
     <main class="article-container">
         <article class="article-content">
