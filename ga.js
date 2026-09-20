@@ -73,3 +73,13 @@
     setTimeout(function(){ m.style.display='none'; },4000);
   });
 })();
+/* ===== LANGUAGE SWITCHER ===== */
+(function(){
+  var currentLang = localStorage.getItem('fvLang') || 'fr';
+  function updateLang(){
+    var lang = localStorage.getItem('fvLang') || 'fr';
+    document.documentElement.lang = lang;
+    // Add more translations here
+  }
+  updateLang();
+})();
