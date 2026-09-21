@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VisiFlora Avis 2026 : Vision & Santé Intestinale | FormeVital</title>
 <meta name="description" content="Avis honnête sur VisiFlora : le complément hybride Vision + Gut Health. Ingrédients, efficacité et garantie.">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.7;color:#334155;background:#ffffff}
-.site-header{background:#fff;border-bottom:1px solid #e2e8f0;padding:18px 0}
+.site-header{background:#fff;border-bottom:1px solid #e2e8f0;padding:18px 0;position:sticky;top:0;z-index:100}
 .header-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
 .logo-link{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo-link img{height:95px;width:auto}
-.logo-text{font-family:'Dancing Script','Brush Script MT',cursive;font-size:3rem;font-weight:bold;background:linear-gradient(135deg,#2563eb 0%,#10b981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-link img{height:110px;width:auto}
+.logo-text{font-family:'Dancing Script','Great Vibes',cursive;font-size:3.2rem;font-weight:700;background:linear-gradient(135deg,#2563eb 0%,#10b981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .main-nav{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .main-nav a{color:#1e293b;text-decoration:none;font-weight:600;font-size:1.05rem}
 .main-nav a:hover{color:#10b981}
@@ -30,7 +31,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-s
 .article-content h2{font-size:1.65rem;font-weight:700;color:#0f172a;margin:45px 0 20px;padding-left:16px;border-left:4px solid #10b981}
 .article-content ul{margin:20px 0 26px;padding-left:26px}
 .article-content ul li{margin-bottom:13px;font-size:1.08rem;line-height:1.7}
-.article-content a{color:#10b981}
 .product-box{background:#ecfdf5;border:2px solid #10b981;border-radius:14px;padding:30px;margin:36px 0;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
 .product-box img{width:190px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}
 .product-box-content{flex:1;min-width:260px}
@@ -40,10 +40,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-s
 .btn-cta{display:inline-block;background:#10b981;color:#fff !important;padding:14px 28px;border-radius:8px;text-decoration:none !important;font-weight:700;margin-top:10px}
 .btn-cta:hover{background:#059669}
 .transparency-note{font-size:0.9rem;color:#94a3b8;margin-top:45px;padding-top:22px;border-top:1px solid #e2e8f0}
-.site-footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:32px 20px;margin-top:60px}
-.site-footer p{margin:5px 0;font-size:0.95rem}
-.site-footer .tagline{color:#94a3b8;font-size:0.85rem;margin-top:8px}
-@media(max-width:768px){.article-title{font-size:1.9rem}.logo-link img{height:70px}.logo-text{font-size:2.2rem}.product-box{flex-direction:column;text-align:center}}
+.site-footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:45px 20px 32px;margin-top:60px}
+.footer-news h3{color:#fff;font-size:1.6rem;margin-bottom:12px}
+.footer-news p{color:#cbd5e1;font-size:1.05rem;margin-bottom:16px}
+.footer-news a{color:#34d399;font-weight:700;font-size:1.05rem}
+.footer-copy{margin-top:35px;font-size:0.95rem}
+.footer-tag{color:#94a3b8;font-size:0.85rem;margin-top:8px}
+@media(max-width:768px){.article-title{font-size:1.9rem}.logo-link img{height:80px}.logo-text{font-size:2.4rem}.product-box{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -113,8 +116,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-s
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 FormeVital. <span data-i18n="foot1">Tous droits réservés.</span></p>
-  <p class="tagline" data-i18n="foot2">Optimisation Santé Cellulaire & Bien-être Naturel</p>
+  <div class="footer-news">
+    <h3>📬 <span data-i18n="fn_title">Get our free guides</span></h3>
+    <p data-i18n="fn_sub">Science-based health, fitness & nutrition advice weekly + exclusive article.</p>
+    <a href="index.html#newsletter" data-i18n="fn_link">Join the newsletter →</a>
+  </div>
+  <p class="footer-copy">© 2026 FormeVital — <span data-i18n="foot1">All rights reserved.</span></p>
+  <p class="footer-tag" data-i18n="foot2">Optimisation Santé Cellulaire & Bien-être Naturel</p>
 </footer>
 
 <script>
@@ -135,6 +143,9 @@ var FV_TRANSLATIONS = {
     h2_verdict:"Verdict FormeVital",
     verdict:"Si vous avez plus de 50 ans et que vous sentez votre vision baisser malgré les carottes et les myrtilles, le problème vient peut-être de votre intestin. VisiFlora est la solution la plus innovante de 2026.",
     transparency:"Transparence : ce site contient des liens d'affiliation. Nous pouvons toucher une commission sans frais supplémentaires pour vous.",
+    fn_title:"Recevez nos guides gratuits",
+    fn_sub:"Conseils santé, fitness & nutrition fondés sur la science chaque semaine + article exclusif.",
+    fn_link:"Rejoindre la newsletter →",
     foot1:"Tous droits réservés.", foot2:"Optimisation Santé Cellulaire & Bien-être Naturel"
   },
   en: {
@@ -153,6 +164,9 @@ var FV_TRANSLATIONS = {
     h2_verdict:"FormeVital Verdict",
     verdict:"If you are over 50 and feel your vision declining despite carrots and blueberries, the problem may come from your gut. VisiFlora is the most innovative solution of 2026.",
     transparency:"Transparency: this site contains affiliate links. We may earn a commission at no extra cost to you.",
+    fn_title:"Get our free guides",
+    fn_sub:"Science-based health, fitness & nutrition advice weekly + exclusive article.",
+    fn_link:"Join the newsletter →",
     foot1:"All rights reserved.", foot2:"Cellular Health Optimization & Natural Wellness"
   },
   es: {
@@ -171,6 +185,9 @@ var FV_TRANSLATIONS = {
     h2_verdict:"Veredicto FormeVital",
     verdict:"Si tienes más de 50 años y sientes que tu visión disminuye a pesar de las zanahorias y los arándanos, el problema puede venir de tu intestino. VisiFlora es la solución más innovadora de 2026.",
     transparency:"Transparencia: este sitio contiene enlaces de afiliados. Podemos recibir una comisión sin costo adicional para ti.",
+    fn_title:"Recibe nuestras guías gratuitas",
+    fn_sub:"Consejos de salud, fitness y nutrición basados en la ciencia cada semana + artículo exclusivo.",
+    fn_link:"Unirse al boletín →",
     foot1:"Todos los derechos reservados.", foot2:"Optimización de la Salud Celular y Bienestar Natural"
   },
   mg: {
@@ -189,10 +206,13 @@ var FV_TRANSLATIONS = {
     h2_verdict:"Verdict FormeVital",
     verdict:"Raha mihoatra ny 50 taona ianao ary mahatsapa fa mihamalemy ny fahitanao na dia misy karaoty sy myrtilles aza, mety avy amin'ny kibonao ny olana. VisiFlora no vahaolana vaovao indrindra amin'ny 2026.",
     transparency:"Fahazavana: misy lien affiliation ity site ity. Mety hahazo commission izahay tsy misy vidiny fanampiny ho anao.",
+    fn_title:"Raiso ny torolalana maimaim-poana",
+    fn_sub:"Torohevitra momba ny fahasalamana, fitness sy sakafo mifototra amin'ny siansa isan-kerinandro + lahatsoratra manokana.",
+    fn_link:"Hidira amin'ny newsletter →",
     foot1:"Zo rehetra voatahiry.", foot2:"Fanatsarana ny Fahasalamana Cellular & Fahasalamana Voajanahary"
   }
 };
-var FV_FLAGS = {fr:"🇫🇷", en:"🇬🇧", es:"🇪", mg:"🇬"};
+var FV_FLAGS = {fr:"🇫🇷", en:"🇬🇧", es:"🇪🇸", mg:"🇲"};
 var FV_NAMES = {fr:"Français", en:"English", es:"Español", mg:"Malagasy"};
 function fvApply(lang){
   localStorage.setItem('fvLang', lang);
