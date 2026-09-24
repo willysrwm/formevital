@@ -64,7 +64,19 @@
     ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
       e.preventDefault();
       var em = ov.querySelector('input[type="email"]').value;
-      var s = document.createElement('script');
+      var s = document.createElem      var fr = document.createElement('iframe');
+      fr.name = 'fvSubFrame'; fr.id = 'fvSubFrame'; fr.style.display = 'none';
+      document.body.appendChild(fr);
+      var f2 = document.createElement('form');
+      f2.method = 'POST';
+      f2.action = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe';
+      f2.target = 'fvSubFrame';
+      f2.style.display = 'none';
+      f2.innerHTML = '<input type="hidden" name="fields[email]" value="' + em.replace(/"/g, '&quot;') + '">' +
+                     '<input type="hidden" name="ml-submit" value="1">' +
+                     '<input type="hidden" name="anticsrf" value="true">';
+      document.body.appendChild(f2);
+      f2.submit();ent('script');
       s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D='+encodeURIComponent(em)+'&ml-submit=1&anticsrf=true';
       document.body.appendChild(s);
       try{ localStorage.setItem('fvSubscribed','1'); }catch(e){}
