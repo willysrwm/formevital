@@ -544,5 +544,32 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
         document.addEventListener('click', tag, true);
     })();
     </script>
+<script>
+(function(){
+  var form = document.querySelector('#mlb2-45601433 form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var em = form.querySelector('input[type="email"]').value;
+    if(!em || em.indexOf('@')<0) return;
+    var fr = document.createElement('iframe');
+    fr.name='fvFootFrame'; fr.style.display='none';
+    document.body.appendChild(fr);
+    var f2 = document.createElement('form');
+    f2.method='POST';
+    f2.action='https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe';
+    f2.target='fvFootFrame';
+    f2.style.display='none';
+    f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">';
+    document.body.appendChild(f2);
+    f2.submit();
+    form.style.display='none';
+    var ok=document.createElement('p');
+    ok.style.cssText='color:#ffffff;font-weight:700;font-size:1.1rem;margin-top:12px;text-align:center';
+    ok.textContent='✅ Merci ! Vérifiez votre boîte mail pour confirmer.';
+    form.parentNode.appendChild(ok);
+  });
+})();
+</script>
 </body>
 </html>
