@@ -35,7 +35,7 @@
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fix2);}else{fix2();}
 })();
-/* ===== FV NEWSLETTER POPUP ===== */
+/* ===== FV NEWSLETTER POPUP ===== */ /*
 (function(){
   var KEY='fvNewsPop';
   function until(){ try{ return parseInt(localStorage.getItem(KEY)||'0',10); }catch(e){ return 0; } }
@@ -72,7 +72,7 @@
     lock(365*864e5);
     setTimeout(function(){ m.style.display='none'; },4000);
   });
-})();
+})(); */
 /* ===== LANGUAGE SWITCHER ===== */
 (function(){
   var currentLang = localStorage.getItem('fvLang') || 'fr';
@@ -83,3 +83,4 @@
   }
   updateLang();
 })();
+(function(){ var s=document.createElement('script'); s.src='subscribe.js'; document.body.appendChild(s); })();
