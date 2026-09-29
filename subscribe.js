@@ -7,7 +7,7 @@
     en: { title:'🎁 Get Our Free 2026 Supplement Checklist',
           sub:'Science-based health tips + the PDF checklist, straight to your inbox. No spam — unsubscribe in 1 click.',
           ph:'Your email...', btn:'Send me the free checklist →',
-          ok:'✅ You're in! Your free gift is on its way to your inbox.',
+          ok:'✅ You are in! Your free gift is on its way to your inbox.',
           later:'No thanks, maybe later', note:'No spam. Unsubscribe anytime.' },
     fr: { title:'🎁 Recevez notre Checklist Compléments 2026',
           sub:'Des conseils santé basés sur la science + la checklist PDF, directement dans votre boîte mail. Sans spam — désinscription en 1 clic.',
