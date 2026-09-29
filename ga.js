@@ -84,3 +84,24 @@
   updateLang();
 })();
 (function(){ var s=document.createElement('script'); s.src='subscribe.js'; document.body.appendChild(s); })();
+/* ===== MAILERLITE OFFICIEL (toutes pages) ===== */
+(function(){
+  var NEW_ACTION = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
+  if(!document.getElementById('mlb2-45601433')){
+    var w=document.createElement('div'); w.style.display='none';
+    w.innerHTML='<div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm"><div class="ml-form-embedBody row-form"><form class="ml-block-form" method="post"><div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email"><input type="email" class="form-control" name="fields[email]"></div></div></div><input type="hidden" name="ml-submit" value="1"><button type="submit"></button><input type="hidden" name="anticsrf" value="true"></form></div></div></div></div>';
+    document.body.appendChild(w);
+  }
+  if(!document.getElementById('fvMlFrame')){
+    var i=document.createElement('iframe'); i.id='fvMlFrame'; i.name='fvMlFrame'; i.style.display='none'; document.body.appendChild(i);
+  }
+  var f=document.querySelector('#mlb2-45601433 form');
+  if(f){ f.action=NEW_ACTION; f.target='fvMlFrame'; }
+  if(window.__mlLoaded) return; window.__mlLoaded=true;
+  (function(w,d,e,u,fn,l,n){w[fn]=w[fn]||function(){(w[fn].q=w[fn].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account','2616760');
+  var s=document.createElement('script');
+  s.src='https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519';
+  s.onload=function(){ try{ fetch('https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/takel'); }catch(e){} };
+  document.body.appendChild(s);
+})();
