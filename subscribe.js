@@ -17,7 +17,6 @@
   };
   var t = T[LANG] || T.en;
 
-  /* Fréquence : jamais si déjà inscrit ; pas plus d'1 fois / 7 jours si refus */
   try {
     if (localStorage.getItem('fvSubscribed')) return;
     var d = localStorage.getItem('fvSubDismissed');
@@ -64,28 +63,26 @@
     ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
       e.preventDefault();
       var em = ov.querySelector('input[type="email"]').value;
-      var s = document.createElem      var fr = document.createElement('iframe');
-      fr.name = 'fvSubFrame'; fr.id = 'fvSubFrame'; fr.style.display = 'none';
-      document.body.appendChild(fr);
-      var f2 = document.createElement('form');
-      f2.method = 'POST';
-      f2.action = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe';
-      f2.target = 'fvSubFrame';
-      f2.style.display = 'none';
-      f2.innerHTML = '<input type="hidden" name="fields[email]" value="' + em.replace(/"/g, '&quot;') + '">' +
-                     '<input type="hidden" name="ml-submit" value="1">' +
-                     '<input type="hidden" name="anticsrf" value="true">';
-      document.body.appendChild(f2);
-      f2.submit();ent('script');
-      s.src = 'https://assets.mailerlite.com/jsonp/2586709/forms/196322409677063525/subscribe?fields%5Bemail%5D='+encodeURIComponent(em)+'&ml-submit=1&anticsrf=true';
-      document.body.appendChild(s);
+      var off = document.querySelector('#mlb2-45601433 form');
+      if (off) {
+        off.querySelector('input[type="email"]').value = em;
+        try { off.requestSubmit ? off.requestSubmit() : off.submit(); } catch(err){ off.submit(); }
+      } else {
+        var fr = document.createElement('iframe');
+        fr.name='fvSubFrame'; fr.style.display='none'; document.body.appendChild(fr);
+        var f2 = document.createElement('form');
+        f2.method='POST';
+        f2.action='https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
+        f2.target='fvSubFrame'; f2.style.display='none';
+        f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">';
+        document.body.appendChild(f2); f2.submit();
+      }
       try{ localStorage.setItem('fvSubscribed','1'); }catch(e){}
       ov.querySelector('#fvSubCard').innerHTML = '<h3 style="font-size:1.45rem;color:#0f172a;margin:0">'+t.ok+'</h3>';
       setTimeout(function(){ ov.remove(); }, 4000);
     });
   }
 
-  /* Déclencheurs pros : 12 s sur la page OU 45 % de scroll OU intention de sortie */
   setTimeout(show, 12000);
   window.addEventListener('scroll', function(){
     var h = document.documentElement;
