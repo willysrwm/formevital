@@ -1,4 +1,4 @@
-/* FormeVital — Modal d'inscription professionnel (fichier unique, toutes pages) */
+/* FormeVital — Modal d'inscription professionnel (honeypot anti-bot) */
 (function(){
   if (window.__fvSubLoaded) return; window.__fvSubLoaded = true;
 
@@ -25,8 +25,8 @@
 
   var shown = false;
   function show(){
-        if (shown) return; shown = true;
-       var ov = document.createElement('div');
+    if (shown) return; shown = true;
+    var ov = document.createElement('div');
     ov.id = 'fvSubOverlay';
     ov.innerHTML = '<style>'+
       '#fvSubOverlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(3px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}'+
@@ -60,9 +60,9 @@
     ov.addEventListener('click', function(e){ if(e.target===ov) close(true); });
     document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ close(true); document.removeEventListener('keydown',esc); } });
 
-       ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
+    ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
       e.preventDefault();
-            var em = ov.querySelector('input[type="email"]').value;
+      var em = ov.querySelector('input[type="email"]').value;
       if (!em || em.indexOf('@') < 0) return;
       var off = document.querySelector('#mlb2-45601433 form');
       if (off) {
@@ -75,7 +75,7 @@
         f2.method='POST';
         f2.action='https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
         f2.target='fvSubFrame'; f2.style.display='none';
-               f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><input type="text" name="hp" style="display:none" tabindex="-1" autocomplete="off">';
+        f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><input type="text" name="hp" style="display:none" tabindex="-1" autocomplete="off">';
         document.body.appendChild(f2); f2.submit();
       }
       try{ localStorage.setItem('fvSubscribed','1'); }catch(e){}
@@ -84,10 +84,10 @@
     });
   }
 
-  setTimeout(show, 12000);
+  setTimeout(show, 5000);
   window.addEventListener('scroll', function(){
     var h = document.documentElement;
-    if ((h.scrollHeight - h.clientHeight) > 0 && h.scrollTop/(h.scrollHeight-h.clientHeight) > 0.45) show();
+    if ((h.scrollHeight - h.clientHeight) > 0 && h.scrollTop/(h.scrollHeight-h.clientHeight) > 0.25) show();
   }, {passive:true});
   document.addEventListener('mouseout', function(e){ if(!e.relatedTarget && e.clientY < 10) show(); });
 })();
