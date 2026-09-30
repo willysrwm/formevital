@@ -26,8 +26,7 @@
   var shown = false;
   function show(){
         if (shown) return; shown = true;
-    var openTime = Date.now();
-    var ov = document.createElement('div');
+       var ov = document.createElement('div');
     ov.id = 'fvSubOverlay';
     ov.innerHTML = '<style>'+
       '#fvSubOverlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(3px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}'+
@@ -63,12 +62,8 @@
 
        ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
       e.preventDefault();
-      var em = ov.querySelector('input[type="email"]').value;
+            var em = ov.querySelector('input[type="email"]').value;
       if (!em || em.indexOf('@') < 0) return;
-      if (Date.now() - openTime < 2500) return;
-      var last = parseInt(localStorage.getItem('fvLastSub')||'0',10);
-      if (Date.now() - last < 60000) return;
-      localStorage.setItem('fvLastSub', String(Date.now()));
       var off = document.querySelector('#mlb2-45601433 form');
       if (off) {
         off.querySelector('input[type="email"]').value = em;
