@@ -548,11 +548,16 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
 (function(){
   var form = document.querySelector('#mlb2-45601433 form');
   if(!form) return;
+  var openTime = Date.now();
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var input = form.querySelector('input[type="email"]');
     var em = input ? input.value : '';
     if(!em || em.indexOf('@')<0) return;
+    if (Date.now() - openTime < 2500) return;
+    var last = parseInt(localStorage.getItem('fvLastSub')||'0',10);
+    if (Date.now() - last < 60000) return;
+    localStorage.setItem('fvLastSub', String(Date.now()));
     if(!document.getElementById('fvMlFrame')){
       var i=document.createElement('iframe'); i.id='fvMlFrame'; i.name='fvMlFrame'; i.style.display='none'; document.body.appendChild(i);
     }
@@ -560,7 +565,7 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
     f2.method='POST';
     f2.action='https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
     f2.target='fvMlFrame'; f2.style.display='none';
-    f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">';
+    f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><input type="text" name="hp" style="display:none" tabindex="-1" autocomplete="off">';
     document.body.appendChild(f2); f2.submit();
     form.style.display='none';
     var ok=document.createElement('p');
