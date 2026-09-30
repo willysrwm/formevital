@@ -25,7 +25,8 @@
 
   var shown = false;
   function show(){
-    if (shown) return; shown = true;
+        if (shown) return; shown = true;
+    var openTime = Date.now();
     var ov = document.createElement('div');
     ov.id = 'fvSubOverlay';
     ov.innerHTML = '<style>'+
@@ -60,9 +61,14 @@
     ov.addEventListener('click', function(e){ if(e.target===ov) close(true); });
     document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ close(true); document.removeEventListener('keydown',esc); } });
 
-    ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
+       ov.querySelector('#fvSubForm').addEventListener('submit', function(e){
       e.preventDefault();
       var em = ov.querySelector('input[type="email"]').value;
+      if (!em || em.indexOf('@') < 0) return;
+      if (Date.now() - openTime < 2500) return;
+      var last = parseInt(localStorage.getItem('fvLastSub')||'0',10);
+      if (Date.now() - last < 60000) return;
+      localStorage.setItem('fvLastSub', String(Date.now()));
       var off = document.querySelector('#mlb2-45601433 form');
       if (off) {
         off.querySelector('input[type="email"]').value = em;
@@ -74,7 +80,7 @@
         f2.method='POST';
         f2.action='https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
         f2.target='fvSubFrame'; f2.style.display='none';
-        f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">';
+               f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><input type="text" name="hp" style="display:none" tabindex="-1" autocomplete="off">';
         document.body.appendChild(f2); f2.submit();
       }
       try{ localStorage.setItem('fvSubscribed','1'); }catch(e){}
