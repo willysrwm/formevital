@@ -100,8 +100,8 @@
   if(window.__mlLoaded) return; window.__mlLoaded=true;
   (function(w,d,e,u,fn,l,n){w[fn]=w[fn]||function(){(w[fn].q=w[fn].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
   ml('account','2616760');
-  var s=document.createElement('script');
+  /*var s=document.createElement('script');
   s.src='https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519';
   s.onload=function(){ try{ fetch('https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/takel'); }catch(e){} };
-  document.body.appendChild(s);
+  document.body.appendChild(s);*/
 })();
