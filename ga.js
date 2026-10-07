@@ -89,7 +89,7 @@
   var NEW_ACTION = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
   if(!document.getElementById('mlb2-45601433')){
     var w=document.createElement('div'); w.style.display='none';
-    w.innerHTML='<div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm"><div class="ml-form-embedBody row-form"><form class="ml-block-form" method="post"><div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email"><input type="email" class="form-control" name="fields[email]"></div></div></div><input type="hidden" name="ml-submit" value="1"><button type="submit"></button><input type="hidden" name="anticsrf" value="true"></form></div></div></div></div>';
+       w.innerHTML='<div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm"><div class="ml-form-embedBody ml-form-embedBodyDefault row-form"><div class="ml-form-formContent"><form class="ml-block-form" method="post"><div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email"><input type="email" class="form-control" name="fields[email]"></div></div></div><input type="hidden" name="ml-submit" value="1"><button type="submit"></button><input type="hidden" name="anticsrf" value="true"></form></div></div></div></div>';
     document.body.appendChild(w);
   }
   if(!document.getElementById('fvMlFrame')){
