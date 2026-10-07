@@ -549,6 +549,7 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
   var form = document.querySelector('#mlb2-45601433 form');
   if(!form) return;
   form.addEventListener('submit', function(e){
+    e.stopImmediatePropagation();
     e.preventDefault();
     var input = form.querySelector('input[type="email"]');
     var em = input ? input.value : '';
@@ -565,9 +566,9 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
     form.style.display='none';
     var ok=document.createElement('p');
     ok.style.cssText='color:#ffffff;font-weight:700;font-size:1.1rem;margin-top:12px;text-align:center';
-    ok.textContent='✅ Merci ! Votre inscription est enregistrée.';
+    ok.textContent='\u2705 Thank you! Your subscription is confirmed.';
     form.parentNode.appendChild(ok);
-  });
+  }, true);
 })();
 </script>
 </body>
