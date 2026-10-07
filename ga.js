@@ -87,9 +87,32 @@
 /* ===== MAILERLITE OFFICIEL (toutes pages) ===== */
 (function(){
   var NEW_ACTION = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
-  if(!document.getElementById('mlb2-45601433')){
-    var w=document.createElement('div'); w.style.display='none';
-       w.innerHTML='<div id="mlb2-45601433" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45601433"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm"><div class="ml-form-embedBody ml-form-embedBodyDefault row-form"><div class="ml-form-formContent"><form class="ml-block-form" method="post"><div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email"><input type="email" class="form-control" name="fields[email]"></div></div></div><input type="hidden" name="ml-submit" value="1"><button type="submit"></button><input type="hidden" name="anticsrf" value="true"></form></div></div></div></div>';
+   if(!document.getElementById('mlb2-45601433')){
+    var w=document.createElement('div');
+    w.id='mlb2-45601433';
+    w.style.display='none';
+    var frm=document.createElement('form');
+    frm.className='ml-block-form';
+    frm.method='post';
+    var inp=document.createElement('input');
+    inp.type='email';
+    inp.name='fields[email]';
+    inp.className='form-control';
+    var sub=document.createElement('input');
+    sub.type='hidden';
+    sub.name='ml-submit';
+    sub.value='1';
+    var csrf=document.createElement('input');
+    csrf.type='hidden';
+    csrf.name='anticsrf';
+    csrf.value='true';
+    var btn=document.createElement('button');
+    btn.type='submit';
+    frm.appendChild(inp);
+    frm.appendChild(sub);
+    frm.appendChild(csrf);
+    frm.appendChild(btn);
+    w.appendChild(frm);
     document.body.appendChild(w);
   }
   if(!document.getElementById('fvMlFrame')){
