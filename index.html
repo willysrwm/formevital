@@ -581,16 +581,21 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
     var form = document.querySelector('#mlb2-45601433 form');
     if(!form){ setTimeout(initFooterForm, 200); return; }
     form.addEventListener('submit', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
       var input = form.querySelector('input[type="email"]');
       var em = input ? input.value : '';
-      if(!em || em.indexOf('@')<0){ e.preventDefault(); return; }
-      setTimeout(function(){
-        form.style.display='none';
-        var ok=document.createElement('p');
-        ok.style.cssText='color:#ffffff;font-weight:700;font-size:1.05rem;margin-top:12px;text-align:center;line-height:1.5';
-        ok.textContent='\u2705 Almost done! Check your inbox (and spam folder) for a confirmation email. Click the link to get your FREE checklist!';
-        form.parentNode.appendChild(ok);
-      }, 500);
+      if(!em || em.indexOf('@')<0) return;
+      var s = document.createElement('script');
+      s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
+      s.onload = function(){ try{ s.remove(); }catch(ex){} };
+      s.onerror = function(){ try{ s.remove(); }catch(ex){} };
+      document.body.appendChild(s);
+      form.style.display='none';
+      var ok=document.createElement('p');
+      ok.style.cssText='color:#ffffff;font-weight:700;font-size:1.05rem;margin-top:12px;text-align:center;line-height:1.5';
+      ok.textContent='\u2705 Almost done! Check your inbox (and spam folder) for a confirmation email. Click the link to get your FREE checklist!';
+      form.parentNode.appendChild(ok);
     }, true);
   }
   if(document.readyState==='loading'){
