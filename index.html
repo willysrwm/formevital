@@ -544,6 +544,37 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
         document.addEventListener('click', tag, true);
     })();
     </script>
+    <script>
+(function(){
+  if(document.getElementById('mlb2-45601433')) return;
+  var w=document.createElement('div');
+  w.id='mlb2-45601433';
+  w.style.display='none';
+  var frm=document.createElement('form');
+  frm.className='ml-block-form';
+  frm.method='post';
+  var inp=document.createElement('input');
+  inp.type='email';
+  inp.name='fields[email]';
+  inp.className='form-control';
+  var sub=document.createElement('input');
+  sub.type='hidden';
+  sub.name='ml-submit';
+  sub.value='1';
+  var csrf=document.createElement('input');
+  csrf.type='hidden';
+  csrf.name='anticsrf';
+  csrf.value='true';
+  var btn=document.createElement('button');
+  btn.type='submit';
+  frm.appendChild(inp);
+  frm.appendChild(sub);
+  frm.appendChild(csrf);
+  frm.appendChild(btn);
+  w.appendChild(frm);
+  document.body.appendChild(w);
+})();
+</script>
 <script>
 (function(){
   function initFooterForm(){
