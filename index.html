@@ -556,11 +556,16 @@ btn_read: "Vakio eto →", cat_visiflora: "Maso sy Kibo", title_visiflora: "Visi
       var input = form.querySelector('input[type="email"]');
       var em = input ? input.value : '';
       if(!em || em.indexOf('@')<0) return;
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe', true);
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      xhr.onload = function(){};
-      xhr.send('fields[email]='+encodeURIComponent(em)+'&ml-submit=1&anticsrf=true');
+      if(!document.getElementById('fvMlFrame')){
+        var i=document.createElement('iframe'); i.id='fvMlFrame'; i.name='fvMlFrame'; i.style.display='none'; document.body.appendChild(i);
+      }
+      var f2=document.createElement('form');
+      f2.method='POST';
+      f2.action='https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe';
+      f2.target='fvMlFrame'; f2.style.display='none';
+      f2.innerHTML='<input type="hidden" name="fields[email]" value="'+em.replace(/"/g,'&quot;')+'"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">';
+      document.body.appendChild(f2); f2.submit();
+      try{ f2.remove(); }catch(ex){}
       form.style.display='none';
       var ok=document.createElement('p');
       ok.style.cssText='color:#ffffff;font-weight:700;font-size:1.1rem;margin-top:12px;text-align:center';
