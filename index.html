@@ -86,7 +86,10 @@
         .cellulaire h2{text-align:center;color:#fff;font-size:2rem;margin-bottom:8px;border:none}
         .ocs-sub{text-align:center;color:#a5b4fc;margin-bottom:30px}
         .ocs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1000px;margin:0 auto;padding:0 20px}
-        .ocs-pillar{background:rgba(255,255,255,.06);border:1px solid rgba(165,180,252,.25);border-radius:14px;padding:20px}
+        .ocs-pillar{background:rgba(255,255,255,.06);border:1px solid rgba(165,180,252,.25);border-radius:14px;padding:20px;max-height:320px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#10b981 rgba(255,255,255,.1)}
+       .ocs-pillar::-webkit-scrollbar{width:6px}
+       .ocs-pillar::-webkit-scrollbar-track{background:rgba(255,255,255,.1);border-radius:3px}
+        .ocs-pillar::-webkit-scrollbar-thumb{background:#10b981;border-radius:3px}
         .ocs-pillar h3{color:#fbbf24;margin-bottom:12px;font-size:1.1rem}
         .ocs-pillar a{display:block;color:#e2e8f0;text-decoration:none;padding:8px 10px;border-radius:8px;margin-bottom:6px;background:rgba(255,255,255,.05)}
         .ocs-pillar a:hover{background:rgba(165,180,252,.2);transform:translateX(4px)}
