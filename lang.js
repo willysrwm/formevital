@@ -28,6 +28,11 @@ const translations = {
         transparency: "Transparency: This site contains affiliate links. We may earn a commission at no extra cost to you.",
         footer_rights: "All rights reserved.",
         footer_tagline: "Cellular Health Optimization & Natural Wellness"
+    cat_mg_gly: "Supplements Review",
+    title_mg_gly: "Best Magnesium Glycinate for Sleep 2026: Top 5 Tested",
+    desc_mg_gly: "We tested 20+ magnesium glycinate supplements for sleep. Here are the top 5 ranked by bioavailability, purity and value.",
+    topic_mg_gly: "💤 Magnesium Glycinate Sleep",
+    ocs_mg_gly: "Best Magnesium Glycinate for Sleep 2026 →",
     },
     fr: {
         nav_blog: "Blog",
@@ -56,6 +61,11 @@ const translations = {
         transparency: "Transparence : Ce site contient des liens d'affiliation. Nous pouvons toucher une commission sans frais supplémentaires pour vous.",
         footer_rights: "Tous droits réservés.",
         footer_tagline: "Optimisation Santé Cellulaire & Bien-être Naturel"
+        cat_mg_gly: "Avis Compléments",
+    title_mg_gly: "Meilleur Magnésium Glycinate pour le Sommeil 2026 : Top 5 Testé",
+    desc_mg_gly: "Nous avons testé plus de 20 compléments de magnésium glycinate pour le sommeil. Voici le top 5 classé par biodisponibilité, pureté et rapport qualité-prix.",
+    topic_mg_gly: "💤 Magnésium Glycinate Sommeil",
+    ocs_mg_gly: "Meilleur Magnésium Glycinate pour le Sommeil 2026 →",
     },
     mg: {
         nav_blog: "Blog",
@@ -84,6 +94,11 @@ const translations = {
         transparency: "Fahamalinana: Misy lien affiliation ity site ity. Mety hahazo commission izahay tsy misy vidiny fanampiny ho anao.",
         footer_rights: "Zo rehetra voatahiry.",
         footer_tagline: "Fanatsarana fahasalamana cellular & fahasalamana voajanahary"
+    cat_mg_gly: "Fitsapana Fanampiana",
+    title_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Toroymaso 2026: Top 5 Voatesta",
+    desc_mg_gly: "Nitestana fanampiana magnésium glycinate mihoatra ny 20 izahay ho an'ny toroymaso. Ireto ny top 5 voalahatra araka ny biodisponibilité, ny fahadiovana ary ny vidiny.",
+    topic_mg_gly: "💤 Magnésium Glycinate Toroymaso",
+    ocs_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Toroymaso 2026 →",
     }
 };
 
