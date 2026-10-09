@@ -100,6 +100,39 @@ const translations = {
     topic_mg_gly: "💤 Magnésium Glycinate Toroymaso",
     ocs_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Toroymaso 2026 →",
     }
+          es: {
+    nav_blog: "Blog",
+    nav_biohacking: "Biohacking",
+    nav_contact: "Contacto",
+    title: "VisiFlora Reseña 2026: El vínculo oculto entre Visión e Intestino",
+    date: "Septiembre 2026",
+    category: "Visión y Salud Intestinal",
+    readtime: "6 min de lectura",
+    intro: '¿Sabías que la salud de tus ojos depende directamente de tu microbiota intestinal? Esto es lo que revela la última investigación sobre el "Eje Intestino-Ojos". **VisiFlora** es el primer suplemento que apunta a esta conexión única.',
+    h2_why: "Por qué VisiFlora cambia las reglas",
+    why_text: "A diferencia de los suplementos clásicos (Luteína + Zinc) que solo tratan los síntomas, VisiFlora utiliza una fórmula híbrida:",
+    point1_strong: "Probióticos específicos",
+    point1: "para la absorción de nutrientes oculares.",
+    point2_strong: "Antioxidantes potentes",
+    point2: "(Luteína, Zeaxantina) para proteger la mácula.",
+    point3_strong: "Soporte neurológico",
+    point3: "para la conexión ojo-cerebro.",
+    product_title: "VisiFlora — Fórmula Híbrida Visión e Intestino",
+    prod_point1: "Rango #19 ClickBank (Top Ventas)",
+    prod_point2: "Garantía de 60 días o reembolso",
+    prod_point3: '"Oferta Océano Azul" (Baja competencia)',
+    cta_button: "Ver precio oficial →",
+    h2_verdict: "Veredicto FormeVital",
+    verdict: "Si tienes más de 50 años y sientes que tu visión disminuye a pesar de las zanahorias y los arándanos, el problema puede venir de tu intestino. VisiFlora es la solución más innovadora de 2026.",
+    transparency: "Transparencia: Este sitio contiene enlaces de afiliados. Podemos recibir una comisión sin costo adicional para ti.",
+    footer_rights: "Todos los derechos reservados.",
+    footer_tagline: "Optimización de Salud Celular y Bienestar Natural",
+    cat_mg_gly: "Reseña de Suplementos",
+    title_mg_gly: "Mejor Magnesio Glicinato para el Sueño 2026: Top 5 Probado",
+    desc_mg_gly: "Probamos más de 20 suplementos de magnesio glicinato para el sueño. Aquí están los 5 mejores clasificados por biodisponibilidad, pureza y relación calidad-precio.",
+    topic_mg_gly: "💤 Magnesio Glicinato Sueño",
+    ocs_mg_gly: "Mejor Magnesio Glicinato para el Sueño 2026 →"
+  }
 };
 
 const langFlags = { en: '🇬', fr: '🇫🇷', mg: '🇲🇬' };
