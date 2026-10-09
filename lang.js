@@ -97,8 +97,8 @@ const translations = {
     cat_mg_gly: "Fitsapana Fanampiana",
     title_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Toroymaso 2026: Top 5 Voatesta",
     desc_mg_gly: "Nitestana fanampiana magnésium glycinate mihoatra ny 20 izahay ho an'ny toroymaso. Ireto ny top 5 voalahatra araka ny biodisponibilité, ny fahadiovana ary ny vidiny.",
-    topic_mg_gly: "💤 Magnésium Glycinate Toroymaso",
-    ocs_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Toroymaso 2026 →",
+    topic_mg_gly: "💤 Magnésium Glycinate Torimaso",
+    ocs_mg_gly: "Magnésium Glycinate Tsara Indrindra ho an'ny Torimaso 2026 →",
     }
           es: {
     nav_blog: "Blog",
