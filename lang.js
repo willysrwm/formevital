@@ -135,8 +135,8 @@ const translations = {
   }
 };
 
-const langFlags = { en: '🇬', fr: '🇫🇷', mg: '🇲🇬' };
-const langNames = { en: 'English', fr: 'Français', mg: 'Malagasy' };
+const langFlags = { en: '🇬🇧', fr: '🇫🇷', mg: '🇲', es: '🇸' };
+const langNames = { en: 'English', fr: 'Français', mg: 'Malagasy', es: 'Español' };
 
 // Get current language from localStorage or default to 'en'
 let currentLang = localStorage.getItem('fvLang') || 'en';
