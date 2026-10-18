@@ -597,9 +597,16 @@ document.addEventListener('DOMContentLoaded', function() {
             s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true';
             s.onload = function() { try { s.remove(); } catch(x) {} };
             document.body.appendChild(s);
+            var lang = document.documentElement.lang || 'fr';
+            var msgs = {
+                fr: '\u2705 V\u00e9rifiez votre bo\u00eete mail pour confirmer !',
+                en: '\u2705 Check your inbox to confirm!',
+                es: '\u2705 \u00a1Revisa tu correo para confirmar!',
+                mg: '\u2705 Jereo ny boatinao mailaka hanamarina!'
+            };
+            mlForm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">' + (msgs[lang] || msgs.fr) + '</p>';
             var toast = document.getElementById('fv-toast');
-            if (toast) { toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 8000); }
-            mlForm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">\u2705 Presque fini ! V\u00e9rifiez votre bo\u00eete mail (et le dossier spam) pour confirmer. Cliquez sur le lien pour recevoir votre guide GRATUIT !</p>';
+            if (toast) { toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 5000); }
         });
     }
 });
