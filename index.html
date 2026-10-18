@@ -589,24 +589,23 @@ document.addEventListener('DOMContentLoaded', function() {
     var mlForm = document.querySelector('#mlb2-45601433 form.ml-block-form');
     if (mlForm) {
         mlForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             var inp = mlForm.querySelector('input[type="email"]');
-            if (!inp || !inp.value || inp.value.indexOf('@') < 0) return;
-            var email = inp.value;
-            var s = document.createElement('script');
-            s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true';
-            s.onload = function() { try { s.remove(); } catch(x) {} };
-            document.body.appendChild(s);
+            if (!inp || !inp.value || inp.value.indexOf('@') < 0) {
+                e.preventDefault();
+                return;
+            }
             var lang = document.documentElement.lang || 'fr';
             var msgs = {
-                fr: '\u2705 V\u00e9rifiez votre bo\u00eete mail pour confirmer !',
-                en: '\u2705 Check your inbox to confirm!',
-                es: '\u2705 \u00a1Revisa tu correo para confirmar!',
-                mg: '\u2705 Jereo ny boatinao mailaka hanamarina!'
+                fr: '\u2705 V\u00e9rifiez votre bo\u00eete mail !',
+                en: '\u2705 Check your inbox!',
+                es: '\u2705 \u00a1Revisa tu correo!',
+                mg: '\u2705 Jereo ny boatinao mailaka!'
             };
-            mlForm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">' + (msgs[lang] || msgs.fr) + '</p>';
-            var toast = document.getElementById('fv-toast');
-            if (toast) { toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 5000); }
+            setTimeout(function() {
+                mlForm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">' + (msgs[lang] || msgs.fr) + '</p>';
+                var toast = document.getElementById('fv-toast');
+                if (toast) { toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 5000); }
+            }, 500);
         });
     }
 });
