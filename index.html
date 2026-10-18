@@ -586,22 +586,22 @@
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('form').forEach(function(frm) {
-        var btn = frm.querySelector('button[type="submit"]');
-        var inp = frm.querySelector('input[type="email"]');
-        if (btn && inp && !frm.id && !frm.classList.contains('ml-block-form')) {
-            frm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var email = inp.value;
-                if (!email || email.indexOf('@') < 0) return;
-                var s = document.createElement('script');
-                s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true';
-                s.onload = function() { try { s.remove(); } catch(x) {} };
-                document.body.appendChild(s);
-                frm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">✅ Presque fini ! Vérifiez votre boîte mail (et le dossier spam) pour confirmer. Cliquez sur le lien pour recevoir votre guide GRATUIT !</p>';
-            });
-        }
-    });
+    var mlForm = document.querySelector('#mlb2-45601433 form.ml-block-form');
+    if (mlForm) {
+        mlForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var inp = mlForm.querySelector('input[type="email"]');
+            if (!inp || !inp.value || inp.value.indexOf('@') < 0) return;
+            var email = inp.value;
+            var s = document.createElement('script');
+            s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(email) + '&ml-submit=1&anticsrf=true';
+            s.onload = function() { try { s.remove(); } catch(x) {} };
+            document.body.appendChild(s);
+            var toast = document.getElementById('fv-toast');
+            if (toast) { toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 8000); }
+            mlForm.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem;text-align:center;padding:20px;">\u2705 Presque fini ! V\u00e9rifiez votre bo\u00eete mail (et le dossier spam) pour confirmer. Cliquez sur le lien pour recevoir votre guide GRATUIT !</p>';
+        });
+    }
 });
 </script>
 </body>
