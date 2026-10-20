@@ -621,6 +621,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+            if (m.type === 'attributes' && m.attributeName === 'style') {
+                var panel = document.getElementById('success-message');
+                if (panel && panel.style.display !== 'none' && panel.offsetParent !== null) {
+                    var lang = document.documentElement.lang || 'fr';
+                    var msgs = {
+                        fr: '\u2705 V\u00e9rifiez votre bo\u00eete mail pour votre Guide Gratuit !',
+                        en: '\u2705 Check your inbox for your Free Guide!',
+                        es: '\u2705 \u00a1Revisa tu correo para tu Gu\u00eda Gratis!',
+                        mg: '\u2705 Jereo ny boatinao mailaka ho an\'ny Torol\u00e0lana Maimaim-poana!'
+                    };
+                    var span = panel.querySelector('.sib-form-message-panel__inner-text');
+                    if (span) span.textContent = msgs[lang] || msgs.en;
+                    // Rehefa 10 segondra, averina ny form
+                    setTimeout(function() {
+                        location.reload();
+                    }, 10000);
+                    observer.disconnect();
+                }
+            }
+        });
+    });
+    var panel = document.getElementById('success-message');
+    if (panel) {
+        observer.observe(panel, { attributes: true, attributeFilter: ['style'] });
+    }
+});
+</script>             
   <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>              
 </body>
 </html>
