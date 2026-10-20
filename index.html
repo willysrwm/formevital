@@ -652,6 +652,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>             
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>              
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>   
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('sib-form');
+    if (!form) return;
+    setTimeout(function() {
+        if (!form.dataset.sibHandled) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var email = document.getElementById('EMAIL').value;
+                if (!email || email.indexOf('@') < 0) return;
+                var formData = new FormData(form);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                }).then(function(r) { return r.json(); }).then(function(data) {
+                    if (data.success) {
+                        var lang = document.documentElement.lang || 'fr';
+                        var msgs = {
+                            fr: '\u2705 V\u00e9rifiez votre bo\u00eete mail pour votre Guide Gratuit !',
+                            en: '\u2705 Check your inbox for your Free Guide!',
+                            es: '\u2705 \u00a1Revisa tu correo para tu Gu\u00eda Gratis!',
+                            mg: '\u2705 Jereo ny boatinao mailaka ho an\'ny Torol\u00e0lana Maimaim-poana!'
+                        };
+                        var container = document.getElementById('sib-form-container');
+                        if (container) {
+                            container.innerHTML = '<div style="background:#10b981;color:#fff;padding:20px;border-radius:8px;text-align:center;font-weight:700;font-size:1.1rem;">' + (msgs[lang] || msgs.en) + '</div>';
+                        }
+                        setTimeout(function() { location.reload(); }, 10000);
+                    }
+                }).catch(function() {
+                    form.submit();
+                });
+            });
+            form.dataset.sibHandled = 'true';
+        }
+    }, 2000);
+});
+</script>              
 </body>
 </html>
