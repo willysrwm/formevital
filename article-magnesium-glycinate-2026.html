@@ -36,7 +36,7 @@
         h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; color: var(--dark); }
         .article-meta { color: var(--gray); font-size: .95rem; }
         .article-image { width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius); margin-bottom: 32px; }
-        h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); border-left: 4px solid var(--secondary); padding-left: 16px; }
+           h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); }
         h3 { font-size: 1.3rem; margin: 28px 0 12px; color: var(--dark); }
         p { margin-bottom: 18px; color: #334155; }
         ul, ol { margin: 16px 0 24px 24px; }
@@ -349,15 +349,7 @@
 
             <p>Remember: supplements support good sleep hygiene — they don't replace it. Dark room, cool temperature (18–20°C), no screens 60 minutes before bed, consistent schedule. Magnesium glycinate amplifies these habits; it doesn't override bad ones.</p>
 
-            <div class="newsletter-cta">
-                <h3>🎁 Get Our Free 2026 Supplement Checklist</h3>
-                <p>Science-based health tips + the PDF checklist, straight to your inbox. No spam — unsubscribe in 1 click.</p>
-                <form class="newsletter-form" id="articleNewsletterForm">
-                    <input type="email" placeholder="Your email..." required id="articleEmailInput">
-                    <button type="submit">Send me the free checklist →</button>
-                </form>
-                <p style="font-size:.8rem;margin-top:12px;opacity:.7">No spam. Unsubscribe anytime.</p>
-            </div>
+            
 
             <h2>Read Next</h2>
             <ul>
@@ -384,21 +376,6 @@
 
     <script src="ga.js"></script>
     <script src="lang.js"></script>
-    <script>
-    (function(){
-      var form = document.getElementById('articleNewsletterForm');
-      if(!form) return;
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var em = document.getElementById('articleEmailInput').value;
-        if(!em || em.indexOf('@')<0) return;
-        var s = document.createElement('script');
-        s.src = 'https://assets.mailerlite.com/jsonp/2616760/forms/197777708275467384/subscribe?fields%5Bemail%5D=' + encodeURIComponent(em) + '&ml-submit=1&anticsrf=true';
-        s.onload = function(){ try{ s.remove(); }catch(ex){} };
-        document.body.appendChild(s);
-        form.innerHTML = '<p style="color:#fff;font-weight:700;font-size:1.1rem">✅ Almost done! Check your inbox (and spam folder) for a confirmation email. Click the link to get your FREE checklist!</p>';
-      });
-    })();
-    </script>
+   
 </body>
 </html>
