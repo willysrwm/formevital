@@ -36,7 +36,7 @@
         h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; color: var(--dark); }
         .article-meta { color: var(--gray); font-size: .95rem; }
         .article-image { width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius); margin-bottom: 32px; }
-           h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); }
+        h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); }
         h3 { font-size: 1.3rem; margin: 28px 0 12px; color: var(--dark); }
         p { margin-bottom: 18px; color: #334155; }
         ul, ol { margin: 16px 0 24px 24px; }
@@ -44,16 +44,17 @@
         .product-card { background: var(--white); border-radius: var(--radius); padding: 28px; margin: 28px auto; box-shadow: var(--shadow); border-left: 4px solid var(--secondary); max-width: 100%; }
         .product-card.best { border-left-color: #f59e0b; background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%); }
         .product-badge { display: inline-block; background: #f59e0b; color: white; padding: 4px 12px; border-radius: 50px; font-size: .75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
-        .product-name { font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+        .product-name { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 12px; line-height: 1.3; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; display: inline-block; }
         .product-rating { color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; }
-        .product-pros { list-style: none; margin-left: 0; }
-        .product-pros li { padding-left: 28px; position: relative; }
+        .product-pros { list-style: none; margin-left: 0; margin-top: 15px; }
+        .product-pros li { padding-left: 28px; position: relative; margin-bottom: 8px; }
         .product-pros li::before { content: "✅"; position: absolute; left: 0; }
         .product-cons { list-style: none; margin-left: 0; margin-top: 12px; }
-        .product-cons li { padding-left: 28px; position: relative; color: var(--gray); }
+        .product-cons li { padding-left: 28px; position: relative; color: var(--gray); margin-bottom: 8px; }
         .product-cons li::before { content: "⚠️"; position: absolute; left: 0; }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--secondary) 0%, #059669 100%); color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.05rem; margin-top: 16px; transition: transform .2s, box-shadow .2s; }
+        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--secondary) 0%, #059669 100%); color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.05rem; margin-top: 16px; transition: transform .2s, box-shadow .2s; text-align: center; }
         .cta-button:hover { transform: translateY(-2px); box-shadow: 0 7px 18px rgba(16,185,129,.45); }
+        .cta-button.secondary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
         .comparison-table { width: 100%; border-collapse: collapse; margin: 28px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
         .comparison-table th { background: var(--primary); color: white; padding: 14px 16px; text-align: left; font-weight: 700; }
         .comparison-table td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; }
@@ -62,13 +63,6 @@
         .faq-item { background: var(--white); border-radius: var(--radius); padding: 24px; margin: 16px 0; box-shadow: var(--shadow); }
         .faq-question { font-weight: 700; color: var(--dark); margin-bottom: 12px; font-size: 1.1rem; }
         .disclaimer { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: var(--radius); margin: 32px 0; font-size: .9rem; color: #92400e; }
-        .newsletter-cta { background: linear-gradient(135deg, #065f46 0%, #1e40af 100%); color: white; padding: 40px; border-radius: var(--radius); text-align: center; margin: 48px 0; }
-        .newsletter-cta h3 { color: white; border: none; padding: 0; margin-bottom: 12px; }
-        .newsletter-cta p { color: rgba(255,255,255,.85); margin-bottom: 20px; }
-        .newsletter-form { display: flex; gap: 12px; max-width: 450px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-        .newsletter-form input { flex: 1; min-width: 200px; padding: 14px 20px; border: none; border-radius: 50px; font-size: 1rem; }
-        .newsletter-form button { background: var(--secondary); color: white; border: none; padding: 14px 28px; border-radius: 50px; font-weight: 700; cursor: pointer; transition: background .2s; }
-        .newsletter-form button:hover { background: #059669; }
         footer { background: var(--dark); color: #94a3b8; padding: 40px 0; text-align: center; }
         footer a { color: #cbd5e1; text-decoration: none; margin: 0 12px; }
         footer a:hover { color: white; }
@@ -76,7 +70,7 @@
             h1 { font-size: 1.7rem; }
             .header-inner { flex-direction: column; gap: 12px; }
             nav { justify-content: center; }
-            .newsletter-form { flex-direction: column; }
+            .product-name { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -127,7 +121,7 @@
             <ul>
                 <li><strong>Magnesium glycinate (bisglycinate):</strong> Bound to glycine, an amino acid with calming effects. Best absorption, gentlest on digestion, ideal for sleep and stress.</li>
                 <li><strong>Magnesium citrate:</strong> Good absorption but draws water into the intestines — can cause loose stools. Better for constipation than sleep.</li>
-                <li><strong>Magnesium oxide:</strong> Poor absorption (~4%). Cheap but largely ineffective for sleep.</li>
+                <li><strong>Magnesium oxide:</strong> Poor absorption (~4%). Cheap but largely ineffective for sleep. <strong>SKIP THIS FORM.</strong></li>
                 <li><strong>Magnesium threonate:</strong> Crosses the blood-brain barrier. Best for cognitive function, not specifically sleep.</li>
                 <li><strong>Magnesium L-threonate:</strong> Emerging research for brain health, limited sleep-specific data.</li>
             </ul>
@@ -136,7 +130,7 @@
 
             <h2>How We Tested</h2>
 
-            <p>Our evaluation criteria:</p>
+            <p>Our evaluation criteria (aligned with our <strong>2026 Supplement Checklist Golden Rule</strong>):</p>
 
             <ol>
                 <li><strong>Elemental magnesium dosage:</strong> Minimum 100mg per serving, clearly stated on label</li>
@@ -150,15 +144,13 @@
 
             <h2>The Top 5 Magnesium Glycinate Supplements for Sleep (2026)</h2>
 
-            <!-- PRODUCT 1 -->
-          
+            <!-- PRODUCT 1: BIOptimizers (ClickBank Affiliate) -->
             <div class="product-card best">
-                <img src="magnesium-produit.png" alt="BIOptimizers Magnesium Breakthrough 7 Forms" style="width:100%;max-width:400px;height:auto;border-radius:12px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto;box-shadow:0 4px 15px rgba(0,0,0,.1)">
-                <span class="product-badge">⭐ Best Overall</span>
-               <div class="product-name">1. BIOptimizers Magnesium Breakthrough</div>
-             ...
-            </div>
-                
+                <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" target="_blank" rel="noopener sponsored">
+                    <img src="magnesium-produit.png" alt="BIOptimizers Magnesium Breakthrough 7 Forms" style="width:100%;max-width:450px;height:auto;border-radius:12px;margin:0 auto 20px auto;display:block;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+                </a>
+                <span class="product-badge">⭐ Best Overall — Full Spectrum</span>
+                <div class="product-name">1. BIOptimizers Magnesium Breakthrough</div>
                 <p><strong>Why it wins:</strong> This is the only supplement on our list that contains <strong>all 7 forms of magnesium</strong> — including glycinate, taurate, malate, orotate, threonate, citrate and chloride. Each form targets a different pathway: glycinate for sleep, taurate for heart, malate for energy, threonate for brain.</p>
                 <ul class="product-pros">
                     <li>7 forms of magnesium in one capsule (including 200mg glycinate)</li>
@@ -173,10 +165,12 @@
                     <li>Requires 2 capsules for full dose</li>
                 </ul>
                 <p><strong>Best for:</strong> Anyone who wants comprehensive magnesium coverage with a specific focus on sleep quality. Ideal if you've tried single-form magnesium and want the full spectrum.</p>
-                <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button" rel="noopener sponsored" target="_blank">Check Price →</a>
+                <div style="text-align: center;">
+                    <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button" rel="noopener sponsored" target="_blank">Check Price →</a>
+                </div>
             </div>
 
-            <!-- PRODUCT 2 -->
+            <!-- PRODUCT 2: Pure Encapsulations (No Affiliate — CTA to #1 Pick) -->
             <div class="product-card">
                 <div class="product-name">2. Pure Encapsulations Magnesium Glycinate</div>
                 <div class="product-rating">★★★★☆ 4.7/5</div>
@@ -194,10 +188,12 @@
                     <li>Only available through practitioners or select retailers</li>
                 </ul>
                 <p><strong>Best for:</strong> People with sensitivities, athletes (NSF certified), or anyone who wants the purest possible formula recommended by healthcare professionals.</p>
-                <a href="https://www.amazon.com/s?k=pure+encapsulations+magnesium+glycinate" class="cta-button" rel="noopener sponsored" target="_blank">Check Price on Amazon →</a>
+                <div style="text-align: center;">
+                    <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button secondary" rel="noopener sponsored" target="_blank">See Our #1 Pick (BIOptimizers) →</a>
+                </div>
             </div>
 
-            <!-- PRODUCT 3 -->
+            <!-- PRODUCT 3: Natural Vitality (No Affiliate — CTA to #1 Pick) -->
             <div class="product-card">
                 <div class="product-name">3. Natural Vitality Calm Plus Magnesium</div>
                 <div class="product-rating">★★★★☆ 4.6/5</div>
@@ -215,10 +211,12 @@
                     <li>Sugar alcohol (stevia) may bother some people</li>
                 </ul>
                 <p><strong>Best for:</strong> People who prefer drinks over pills, those dealing with both stress and sleep issues, or anyone who wants a relaxing evening ritual.</p>
-                <a href="https://www.amazon.com/s?k=natural+vitality+calm+magnesium" class="cta-button" rel="noopener sponsored" target="_blank">Check Price on Amazon →</a>
+                <div style="text-align: center;">
+                    <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button secondary" rel="noopener sponsored" target="_blank">See Our #1 Pick (BIOptimizers) →</a>
+                </div>
             </div>
 
-            <!-- PRODUCT 4 -->
+            <!-- PRODUCT 4: NOW Foods (No Affiliate — CTA to #1 Pick) -->
             <div class="product-card">
                 <div class="product-name">4. NOW Foods Magnesium Glycinate</div>
                 <div class="product-rating">★★★★☆ 4.5/5</div>
@@ -236,10 +234,12 @@
                     <li>Not third-party tested beyond GMP</li>
                 </ul>
                 <p><strong>Best for:</strong> Budget-conscious buyers who still want quality chelated magnesium. Perfect for nightly use without breaking the bank.</p>
-                <a href="https://www.amazon.com/s?k=now+foods+magnesium+glycinate" class="cta-button" rel="noopener sponsored" target="_blank">Check Price on Amazon →</a>
+                <div style="text-align: center;">
+                    <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button secondary" rel="noopener sponsored" target="_blank">See Our #1 Pick (BIOptimizers) →</a>
+                </div>
             </div>
 
-            <!-- PRODUCT 5 -->
+            <!-- PRODUCT 5: Thorne (No Affiliate — CTA to #1 Pick) -->
             <div class="product-card">
                 <div class="product-name">5. Thorne Magnesium Bisglycinate</div>
                 <div class="product-rating">★★★★★ 4.8/5</div>
@@ -256,7 +256,9 @@
                     <li>Requires 2–3 capsules for therapeutic dose</li>
                 </ul>
                 <p><strong>Best for:</strong> Athletes, competitive sports participants, or anyone who wants the absolute highest purity standard available.</p>
-                <a href="https://www.amazon.com/s?k=thorne+magnesium+bisglycinate" class="cta-button" rel="noopener sponsored" target="_blank">Check Price on Amazon →</a>
+                <div style="text-align: center;">
+                    <a href="https://6d7bast9yj-j8x9awx-zp46v23.hop.clickbank.net" class="cta-button secondary" rel="noopener sponsored" target="_blank">See Our #1 Pick (BIOptimizers) →</a>
+                </div>
             </div>
 
             <h2>Comparison Table</h2>
@@ -349,8 +351,6 @@
 
             <p>Remember: supplements support good sleep hygiene — they don't replace it. Dark room, cool temperature (18–20°C), no screens 60 minutes before bed, consistent schedule. Magnesium glycinate amplifies these habits; it doesn't override bad ones.</p>
 
-            
-
             <h2>Read Next</h2>
             <ul>
                 <li><a href="article-stress.html">Chronic Stress: 7 Science-Backed Natural Solutions</a></li>
@@ -360,22 +360,23 @@
             </ul>
         </div>
     </article>
-           <section style="background-color: #0f172a !important; color: #ffffff !important; padding: 60px 20px !important; text-align: center !important; margin-top: 60px !important; border: none !important; opacity: 1 !important; width: 100% !important;">
+
+    <section style="background-color: #0f172a !important; color: #ffffff !important; padding: 60px 20px 20px 20px !important; text-align: center !important; margin: 0 !important; border: none !important; width: 100% !important;">
         <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
             <h2 style="font-size: 2rem !important; margin-bottom: 15px !important; color: #ffffff !important; border: none !important; padding: 0 !important; opacity: 1 !important; line-height: 1.2 !important;">📬 Get our free guides</h2>
             <p style="color: #cbd5e1 !important; font-size: 1.1rem !important; margin-bottom: 25px !important; max-width: 600px !important; margin-left: auto !important; margin-right: auto !important; opacity: 1 !important;">Science-based health, fitness & nutrition advice weekly + exclusive article.</p>
             <a href="index.html#newsletter-form" style="display: inline-block !important; color: #10b981 !important; font-weight: 700 !important; font-size: 1.1rem !important; text-decoration: underline !important; opacity: 1 !important;">Join the newsletter →</a>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <p><a href="infos.html">About</a> · <a href="infos.html">Privacy</a> · <a href="infos.html">Terms</a> · <a href="infos.html">Contact</a></p>
-            <p style="margin-top:12px">© 2026 FormeVital. All rights reserved.</p>
+
+    <footer style="background-color: #0f172a !important; color: #94a3b8 !important; padding: 20px 0 40px 0 !important; text-align: center !important; margin: 0 !important; border: none !important; width: 100% !important;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <p style="margin: 0 0 12px 0;"><a href="infos.html" style="color: #cbd5e1; text-decoration: none; margin: 0 12px;">About</a> · <a href="infos.html" style="color: #cbd5e1; text-decoration: none; margin: 0 12px;">Privacy</a> · <a href="infos.html" style="color: #cbd5e1; text-decoration: none; margin: 0 12px;">Terms</a> · <a href="infos.html" style="color: #cbd5e1; text-decoration: none; margin: 0 12px;">Contact</a></p>
+            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">© 2026 FormeVital. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="ga.js"></script>
     <script src="lang.js"></script>
-   
 </body>
 </html>
