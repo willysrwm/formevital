@@ -101,35 +101,7 @@
         .blog-category{color:#10b981 !important}
         .logo{font-family:'Great Vibes',cursive;font-size:3rem;font-weight:400;letter-spacing:1px}
         .logo em{font-style:normal}
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="#" class="logo"><img src="logo.png" alt="FormeVital" style="height:40px; border-radius:50%; vertical-align:middle; margin-right:8px;">Forme<span>Vital</span></a>
-                <nav>
-                    <a href="#accueil" data-i18n="nav_home">Accueil</a>
-                    <a href="#alaune" data-i18n="nav_reviews">Avis & Tests</a>
-                    <a href="#blog" data-i18n="nav_blog">Blog</a>
-                    <a href="#contact" data-i18n="nav_contact">Contact</a>
-                    <div class="lang-wrap" id="langWrap">
-                        <span class="lang-globe">🌍</span>
-                        <span class="lang-current" id="langCurrent">Français</span>
-                        <span class="lang-arrow">▼</span>
-                        <div class="lang-menu" id="langMenu">
-                            <button type="button" data-lang="fr" class="active">Français</button>
-                            <button type="button" data-lang="en">English</button>
-                            <button type="button" data-lang="es">Español</button>
-                            <button type="button" data-lang="mg">Malagasy</button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-          <style>
+        
         /* DynamicGallery CSS */
         .dynamic-gallery {
             position: relative;
@@ -230,12 +202,38 @@
             .gallery-content p { font-size: 1rem; }
         }
     </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo"><img src="logo.png" alt="FormeVital" style="height:40px; border-radius:50%; vertical-align:middle; margin-right:8px;">Forme<span>Vital</span></a>
+                <nav>
+                    <a href="#accueil" data-i18n="nav_home">Accueil</a>
+                    <a href="#alaune" data-i18n="nav_reviews">Avis & Tests</a>
+                    <a href="#blog" data-i18n="nav_blog">Blog</a>
+                    <a href="#contact" data-i18n="nav_contact">Contact</a>
+                    <div class="lang-wrap" id="langWrap">
+                        <span class="lang-globe">🌍</span>
+                        <span class="lang-current" id="langCurrent">Français</span>
+                        <span class="lang-arrow">▼</span>
+                        <div class="lang-menu" id="langMenu">
+                            <button type="button" data-lang="fr" class="active">Français</button>
+                            <button type="button" data-lang="en">English</button>
+                            <button type="button" data-lang="es">Español</button>
+                            <button type="button" data-lang="mg">Malagasy</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <section class="dynamic-gallery" id="dynamicGallery">
         <div class="gallery-content">
             <h1 data-i18n="hero_title">Votre Guide Santé, Fitness & Avis Produits</h1>
             <p data-i18n="hero_desc">Conseils basés sur la science et tests honnêtes des meilleurs compléments pour une vie plus saine.</p>
-            <a href="#reviews" class="gallery-cta" data-i18n="hero_cta">Voir nos Avis 2026</a>
+            <a href="#alaune" class="gallery-cta" data-i18n="hero_cta">Voir nos Avis 2026</a>
         </div>
         <div class="gallery-dots" id="galleryDots"></div>
     </section>
@@ -421,6 +419,8 @@
             <a href="article-magnesium-glycinate-2026.html" data-i18n="topic_mg_gly">💤 Magnesium Glycinate Sleep</a>
             <a href="article-visiflora.html" class="card" style="text-decoration:none; color:inherit;"> 👁️ VisiFlora (Vision)</a>
             <a href="article-ashwagandha-ksm66-2026.html" data-i18n="topic_ashwa">🌿 Ashwagandha KSM-66 vs Sensoril</a>       
+            <!-- NOUVEAU LIEN D3+K2 -->
+            <a href="article-vitamin-d3-k2-igenics-2026.html">☀️ Vitamine D3 + K2</a>
         </div>
     </section>
     <section class="cellulaire" id="cellulaire">
@@ -454,6 +454,8 @@
              <div class="colonne" style="background:#1e293b;border-radius:12px;padding:20px;min-width:280px">
              <h3 style="color:#fbbf24;margin-top:0">👁️ Vision & Santé Intestinale</h3>
              <a href="article-visiflora.html" style="display:block;background:#334155;color:white;padding:12px;border-radius:8px;text-decoration:none;margin-bottom:10px">VisiFlora : avis complet 2026 →</a>
+             <!-- NOUVEAU LIEN D3+K2 DANS OCS -->
+             <a href="article-vitamin-d3-k2-igenics-2026.html" style="display:block;background:#334155;color:white;padding:12px;border-radius:8px;text-decoration:none;margin-bottom:10px">Vitamine D3 + K2 : Synergie Os & Yeux →</a>
             </div>
         </div>
     </section>
@@ -462,19 +464,14 @@
             <h2 class="section-title" data-i18n="blog_title">Derniers Articles & Guides</h2>
             <p class="section-subtitle" data-i18n="blog_sub">Tous nos conseils santé, nutrition et tests produits</p>
             <div class="blog-grid">
-        <!-- Card Vitamine D3 + K2 -->
-<div class="blog-card">
-    <div class="card-image" style="background-color: #fef3c7;"> <!-- Loko mavo mazava mifanaraka amin'ny urgency box -->
-        <!-- Raha manana sary kely ianao dia ampidirina eto, fa raha tsia dia atao icon simple -->
-        <div style="font-size: 4rem; text-align: center; padding-top: 40px;">☀️🦴</div>
-    </div>
-    <div class="card-content">
-        <span class="card-category">IMMUNITÉ & VISION</span>
-        <h3>Vitamine D3 + K2 : Le Lien Manquant pour la Vision et les Os (2026)</h3>
-        <p>Pourquoi la D3 seule ne suffit pas. Découvrez la synergie D3+K2 pour les os ET les yeux, et la percée de l'axe Intestin-Yeux 2026.</p>
-        <a href="article-vitamin-d3-k2-igenics-2026.html" class="read-more">Lire la suite →</a>
-    </div>
-</div>        
+        <!-- Card Vitamine D3 + K2 CORRIGÉE -->
+        <a href="article-vitamin-d3-k2-igenics-2026.html" class="blog-card">
+            <div class="blog-icon" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">☀️🦴</div>
+            <div class="blog-category">Immunité & Vision</div>
+            <h3 class="blog-title">Vitamine D3 + K2 : Le Lien Manquant pour la Vision et les Os (2026)</h3>
+            <p class="blog-excerpt">Pourquoi la D3 seule ne suffit pas. Découvrez la synergie D3+K2 pour les os ET les yeux, et la percée de l'axe Intestin-Yeux 2026.</p>
+            <span class="blog-link">Lire la suite →</span>
+        </a>        
         <a href="article-stem-cells-2026.html" class="blog-card">
             <div class="blog-icon" style="background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);">🔋</div>
             <div class="blog-category" data-i18n="cat_stemcells">Biohacking & Cellular Health</div>
@@ -941,4 +938,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>              
 </body>
-</html>
+    </html>
