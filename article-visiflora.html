@@ -6,22 +6,38 @@
     <title>VisiFlora Avis 2026 : Le Lien Caché Entre Intestin et Yeux | FormeVital</title>
     <meta name="description" content="Avis honnête sur VisiFlora 2026. Découvrez comment les probiotiques spécifiques + Lutéine/Zéaxanthine protègent votre vision via l'axe intestin-yeux.">
     <link rel="icon" type="image/png" href="logo.png">
+    <!-- Ajout de la police Great Vibes pour le logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #10b981; --dark: #1e293b; --light: #f8fafc; --gray: #64748b; --white: #ffffff; --radius: 12px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: var(--dark); background-color: var(--light); }
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER UNIFORMISÉ */
         header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 50px; border-radius: 50%; }
         .logo span { color: var(--secondary); }
         .back-link { color: var(--primary); text-decoration: none; font-weight: 600; }
+        
         article { padding: 40px 0 60px; max-width: 800px; margin: 0 auto; }
         .article-header { text-align: center; margin-bottom: 40px; }
         .article-category { display: inline-block; background: var(--secondary); color: white; padding: 6px 16px; border-radius: 50px; font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 16px; }
         h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; color: var(--dark); }
         .article-meta { color: var(--gray); font-size: .95rem; }
-        .article-image { width: 100%; height: 1200px; object-fit: cover; border-radius: var(--radius); margin-bottom: 32px; }
+        
+        /* IMAGE HERO HAUTEUR 1300PX */
+        .article-image { 
+            width: 100%; 
+            height: 1300px; /* Hauteur totale demandée */
+            object-fit: cover; 
+            border-radius: var(--radius); 
+            margin-bottom: 32px; 
+            box-shadow: var(--shadow); 
+        }
+
         h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); }
         p { margin-bottom: 18px; color: #334155; }
         ul, ol { margin: 16px 0 24px 24px; }
@@ -38,13 +54,20 @@
         footer { background: var(--dark); color: #94a3b8; padding: 40px 0; text-align: center; }
         footer a { color: #cbd5e1; text-decoration: none; margin: 0 12px; }
         footer a:hover { color: white; }
-        @media (max-width: 768px) { h1 { font-size: 1.7rem; } .header-inner { flex-direction: column; gap: 12px; } }
+        
+        @media (max-width: 768px) { 
+            h1 { font-size: 1.7rem; } 
+            .header-inner { flex-direction: column; gap: 12px; } 
+            /* Ajustement mobile pour éviter que l'image ne prenne 3 écrans de haut */
+            .article-image { height: 500px; } 
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-inner">
-            <a href="index.html" class="logo">Forme<span>Vital</span></a>
+            <!-- LOGO UNIFORMISÉ AVEC IMAGE ET POLICE -->
+            <a href="index.html" class="logo"><img src="logo.png" alt="FormeVital">Forme<span>Vital</span></a>
             <a href="index.html#blog" class="back-link">← Back to articles</a>
         </div>
     </header>
@@ -57,6 +80,7 @@
                 <p class="article-meta">Updated November 9, 2026 · 7 min read · By FormeVital Team</p>
             </div>
 
+            <!-- IMAGE HERO HAUTEUR 1200PX -->
             <img src="visiflora-hero.jpg" alt="VisiFlora supplement for gut-eye axis health" class="article-image" onerror="this.style.display='none'">
 
             <div class="disclaimer">
