@@ -23,7 +23,17 @@
         .article-category { display: inline-block; background: var(--secondary); color: white; padding: 6px 16px; border-radius: 50px; font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 16px; }
         h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; color: var(--dark); }
         .article-meta { color: var(--gray); font-size: .95rem; }
-        .article-image { width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius); margin-bottom: 32px; }
+        
+        /* FIX: Sary Hero Lehibe Kokoa */
+        .article-image { 
+            width: 100%; 
+            height: 600px; /* Nalehibeina avy amin'ny 350px ho 600px */
+            object-fit: cover; 
+            border-radius: var(--radius); 
+            margin-bottom: 40px; 
+            box-shadow: var(--shadow); 
+        }
+
         h2 { font-size: 1.6rem; margin: 36px 0 16px; color: var(--dark); }
         p { margin-bottom: 18px; color: #334155; }
         ul, ol { margin: 16px 0 24px 24px; }
@@ -40,7 +50,11 @@
         footer { background: var(--dark); color: #94a3b8; padding: 40px 0; text-align: center; }
         footer a { color: #cbd5e1; text-decoration: none; margin: 0 12px; }
         footer a:hover { color: white; }
-        @media (max-width: 768px) { h1 { font-size: 1.7rem; } .header-inner { flex-direction: column; gap: 12px; } }
+        @media (max-width: 768px) { 
+            h1 { font-size: 1.7rem; } 
+            .header-inner { flex-direction: column; gap: 12px; } 
+            .article-image { height: 400px; } /* Mobile height */
+        }
     </style>
 </head>
 <body>
@@ -54,14 +68,14 @@
     <article>
         <div class="container">
             <div class="article-header">
-                <img src="vitamin-d3-k2-vision-hero.jpeg" alt="Vitamin D3 K2 supplements for bone and eye health" class="article-image">
                 <span class="article-category">Immunity, Bones & Vision</span>
                 <h1>Vitamin D3 + K2: The Missing Link for Vision & Bone Health (2026)</h1>
                 <p class="article-meta">Updated November 9, 2026 · 8 min read · By FormeVital Team</p>
             </div>
 
-            <!-- Placeholder hero image - replace with actual D3+K2 image when uploaded -->
-            <img src="joints1.jpg" alt="Vitamin D3 K2 supplements for bone and eye health" class="article-image">
+            <!-- FIX: Sary Hero Vaovao (Eye + Bone Synergy) -->
+            <!-- Raha mbola tsy upload-nao ny sary AI, dia ampiasao ity placeholder ity mandra-pahafahanao -->
+            <img src="vitamin-d3-k2-vision-hero.jpg" alt="Vitamin D3 K2 synergy for eye and bone health" class="article-image" onerror="this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=800&fit=crop'; this.alt='Medical Illustration Placeholder';">
 
             <div class="disclaimer">
                 <strong>Disclosure:</strong> This article contains affiliate links. We may earn a commission on purchases made through these links, at no extra cost to you. All recommendations are based on independent research and our 2026 Supplement Checklist.
@@ -82,11 +96,18 @@
             </div>
 
             <h2 id="synergy">The D3+K2 Synergy: Bones & Eyes</h2>
-            <p>Vitamin D3 increases calcium absorption. But without K2 (specifically MK-7), that calcium can deposit in arteries instead of bones. For eyes, D3 receptors are present in the retina, supporting photoreceptor function, while K2 protects the delicate micro-vessels supplying the optic nerve.</p>
+            <p>Vitamin D3 increases calcium absorption from your gut into your bloodstream. But without K2 (specifically MK-7), that calcium can deposit in arteries instead of bones. For eyes, D3 receptors are present in the retina, supporting photoreceptor function, while K2 protects the delicate micro-vessels supplying the optic nerve.</p>
             
             <div class="highlight-box">
                 <strong>💡 The Foundation Rule:</strong> D3+K2 is non-negotiable for anyone over 30. It's the base layer of both bone density and long-term vision preservation.
             </div>
+
+            <!-- Lahatsoratra Fanampiny (Educational Content) -->
+            <h3>Why "D3 Alone" Can Be Dangerous</h3>
+            <p>Many people supplement with high doses of Vitamin D3 (5000 IU+) without K2. While this boosts blood levels of D3, it creates a "calcium paradox": calcium is absorbed rapidly but has nowhere to go. Over time, this can lead to arterial calcification (hardening of arteries) rather than stronger bones. K2 acts as the traffic cop, directing calcium exactly where it belongs.</p>
+
+            <h3>The Retinal Connection</h3>
+            <p>Recent studies show that Vitamin D deficiency is linked to dry eye syndrome and age-related macular degeneration. The retina has a high concentration of D3 receptors. When combined with K2's vascular protection, this duo supports the intricate blood supply needed for sharp vision.</p>
 
             <h2 id="dosage">Exact Dosage Protocol (Checklist #2)</h2>
             <p>Per our verified 2026 Supplement Checklist:</p>
@@ -108,7 +129,7 @@
 
             <!-- PRODUCT CARD: iGenics (Bridge Product) -->
             <div style="border-left: 5px solid #f59e0b; background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin: 35px 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);">
-                <!-- FIXED HOPLINK: removed duplicate https:// and .hop.clickbank.net -->
+                <!-- FIXED HOPLINK -->
                 <a href="https://a2a04iqbrjxnaq3mi6l9lbsasr.hop.clickbank.net" target="_blank" rel="noopener sponsored">
                     <!-- Placeholder product image - replace with igenics-product.jpg when uploaded -->
                     <img src="joint-genesis.png" alt="iGenics Vision Support Formula" style="width:100%;max-width:450px;height:auto;border-radius:12px;margin:0 auto 25px auto;display:block;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
