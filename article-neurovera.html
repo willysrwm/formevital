@@ -18,21 +18,27 @@ header{background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.08);position:sticky;top:
 nav a{color:var(--dark);text-decoration:none;margin-left:15px;font-weight:600}
 nav a:hover{color:var(--green)}
 
-/* HERO SECTION WITH BACKGROUND IMAGE */
+/* HERO SECTION CORRIGÉE */
 .hero-section {
     position: relative;
-    background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.8)), url('neurovera-hero.jpg'); /* Remplacez par votre image générée */
+    /* Overlay légèrement plus foncé pour garantir la lisibilité sur l'image détaillée */
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('neurovera-hero.jpg'); 
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 80px 20px;
+    /* HAUTEUR AUGMENTÉE À 600PX */
+    min-height: 600px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border-radius: 0 0 20px 20px;
+    padding: 40px 20px;
+    border-radius: 0 0 24px 24px;
     margin-bottom: 40px;
 }
-.hero-content { max-width: 760px; margin: 0 auto; position: relative; z-index: 2; }
-.hero-section h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-.hero-meta { font-size: 1rem; opacity: 0.9; }
+.hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-section h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; text-shadow: 0 4px 15px rgba(0,0,0,0.6); font-weight: 800; }
+.hero-meta { font-size: 1.1rem; opacity: 0.95; font-weight: 500; }
 
 article{max-width:760px;margin:0 auto;padding:0 20px 40px}
 h2{color:var(--dark);margin:35px 0 15px;font-size:1.4rem;border-left:4px solid var(--green);padding-left:12px}
@@ -83,8 +89,9 @@ a:hover{text-decoration:underline}
 footer{background:var(--dark);color:#94a3b8;text-align:center;padding:20px;font-size:.9rem;border-top:1px solid #334155}
 
 @media (max-width: 768px) {
-    .hero-section { padding: 60px 20px; }
-    .hero-section h1 { font-size: 1.8rem; }
+    .hero-section { min-height: 400px; padding: 30px 20px; }
+    .hero-section h1 { font-size: 1.9rem; }
+    .hero-meta { font-size: 0.9rem; }
 }
 </style>
 </head>
@@ -95,7 +102,7 @@ footer{background:var(--dark);color:#94a3b8;text-align:center;padding:20px;font-
 <nav><a href="index.html#blog">Blog</a><a href="index.html#alaune">Reviews & Tests</a><a href="index.html#contact">Contact</a></nav>
 </div></header>
 
-<!-- HERO SECTION ATTRAYANTE -->
+<!-- HERO SECTION AVEC NOUVELLE IMAGE ET HAUTEUR 600PX -->
 <div class="hero-section">
     <div class="hero-content">
         <h1>NeuroVera Review 2026: Honest Test for Memory & Focus</h1>
@@ -123,7 +130,7 @@ footer{background:var(--dark);color:#94a3b8;text-align:center;padding:20px;font-
 <li><strong>Broad profile:</strong> Students, overloaded professionals, 45+ concerned about memory.</li>
 </ul>
 
-<!-- PREMIER BOUTON CTA (Après les points forts) -->
+<!-- PREMIER BOUTON CTA -->
 <div class="cta-box">
     <strong>🧠 Ready to check NeuroVera?</strong>
     <p>See today's price, full ingredient list, and exclusive discounts.</p>
@@ -159,7 +166,13 @@ footer{background:var(--dark);color:#94a3b8;text-align:center;padding:20px;font-
     <p style="color:#1e40af;margin-top:8px;margin-bottom:0;">Download our free <a href="https://drive.google.com/uc?export=download&id=1tAdOFUh_xNYByQlPaxeL_JpXgMIk7OTX" target="_blank" style="color:#2563eb;text-decoration:underline;">2026 Supplement Checklist</a> — exact doses, stacking protocols, and what to avoid.</p>
 </div>
 
-<img src="neurovera.png" alt="NeuroVera official bottle" style="width:100%;max-width:420px;border-radius:12px;display:block;margin:30px auto;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+<!-- IMAGE PRODUIT MAINTENANT CLIQUABLE AVEC LE HOPLINK -->
+<div style="text-align:center; margin: 40px 0;">
+    <a href="https://afa0euwcxn5s7o8ghp4kx7108g.hop.clickbank.net" rel="nofollow sponsored" target="_blank">
+        <img src="neurovera.png" alt="NeuroVera official bottle - Click to visit official site" style="width:100%;max-width:420px;border-radius:12px;display:block;margin:0 auto;box-shadow:0 10px 30px rgba(0,0,0,0.15);transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+    </a>
+    <p style="font-size:0.85rem; color:#64748b; margin-top:10px;">👆 Click image to check official price</p>
+</div>
 
 <h2>5. Frequently Asked Questions</h2>
 <div class="faq-item">
