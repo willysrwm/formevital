@@ -178,41 +178,75 @@
                 <p style="text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 10px;">Promotional price • Limited stock • 60-day guarantee</p>
             </div>
 
-                       <!-- SECTION AMAZON AMÉLIORÉE -->
+                                 <!-- SECTION AMAZON AMÉLIORÉE (ENGLISH + FLASH EFFECT) -->
             <div style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); border: 1px solid #e2e8f0; border-left: 5px solid #f59e0b; border-radius: 16px; padding: 30px; margin: 40px 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);">
                 <h3 style="margin: 0 0 20px 0; font-size: 1.5rem; color: #1e293b; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.8rem;">🛒</span>
-                    <span style="background: linear-gradient(135deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Alternative disponible sur Amazon</span>
+                    <span style="background: linear-gradient(135deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Available on Amazon</span>
                 </h3>
-                <p style="color: #475569; margin-bottom: 25px; font-size: 1.05rem;">Si vous préférez un format physique avec livraison rapide ou une marque spécifique testée par notre communauté :</p>
+                <p style="color: #475569; margin-bottom: 25px; font-size: 1.05rem;">Prefer a physical format with fast shipping or a specific brand tested by our community?</p>
                 
                 <div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;">
                     <div style="flex-shrink: 0;">
-                        <img src="weightworld-magnesium.jpg" alt="WeightWorld Magnesium Bisglycinate sur Amazon" style="width: 140px; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="weightworld-magnesium.jpg" alt="WeightWorld Magnesium Bisglycinate on Amazon" style="width: 140px; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                     <div style="flex: 1; min-width: 250px;">
                         <strong style="color: #1e293b; font-size: 1.2rem; display: block; margin-bottom: 8px;">Magnesium Bisglycinate WeightWorld</strong>
-                        <span style="font-size: 0.95rem; color: #64748b; display: block; margin-bottom: 15px;">180 gélules • Fabriqué en UE • Avec Vitamine B6</span>
+                        <span style="font-size: 0.95rem; color: #64748b; display: block; margin-bottom: 15px;">180 capsules • Made in EU • With Vitamin B6</span>
                         
-                        <!-- BOUTON CTA AMAZON ATTRAYANT -->
-                        <a href="https://amzn.to/3XyZ123" rel="nofollow sponsored" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); transition: all 0.3s ease; border: none;">
-                            🔥 Voir le prix sur Amazon →
-                        </a>
+                        <!-- BOUTON CTA AMAZON AVEC EFFET FLASH/PULSE -->
                         <style>
-                            a[href*="amzn.to"]:hover {
+                            @keyframes amazonPulse {
+                                0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+                                70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+                                100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+                            }
+                            .amazon-cta-btn {
+                                display: inline-block;
+                                background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                                color: white;
+                                padding: 14px 28px;
+                                border-radius: 50px;
+                                text-decoration: none;
+                                font-weight: 800;
+                                font-size: 1.05rem;
+                                box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+                                transition: all 0.3s ease;
+                                border: none;
+                                animation: amazonPulse 2s infinite;
+                                position: relative;
+                                overflow: hidden;
+                            }
+                            .amazon-cta-btn::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+                                transition: left 0.5s;
+                            }
+                            .amazon-cta-btn:hover::before {
+                                left: 100%;
+                            }
+                            .amazon-cta-btn:hover {
                                 transform: translateY(-3px);
                                 box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+                                animation: none;
                             }
                         </style>
+                        <a href="https://amzn.to/3XyZ123" rel="nofollow sponsored" target="_blank" class="amazon-cta-btn">
+                            🔥 Check Price on Amazon →
+                        </a>
                     </div>
                 </div>
                 
-                <!-- DIVULGATION AMAZON OBLIGATOIRE -->
+                <!-- DIVULGATION AMAZON OBLIGATOIRE (ENGLISH) -->
                 <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 25px; font-style: italic; border-top: 1px solid #e2e8f0; padding-top: 15px;">
-                    *En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Le prix peut varier.
+                    *As an Amazon Associate, I earn from qualifying purchases. Prices may vary.
                 </p>
             </div>
-
             <!-- PRODUCT 2: Pure Encapsulations -->
             <div style="border-left: 4px solid var(--secondary); background: var(--white); border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; margin: 28px auto; box-shadow: var(--shadow);">
                 <div style="display: block; margin-bottom: 15px;">
