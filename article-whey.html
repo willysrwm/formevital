@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Bien Choisir sa Protéine Whey en 2026 ? | FormeVital</title>
     <meta name="description" content="Whey concentrée, isolate ou native ? Découvrez notre guide complet et notre top 3 des meilleures protéines whey en 2026 pour la musculation et la récupération.">
+    <link rel="icon" type="image/png" href="logo.png">
     <style>
         :root {
             --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #10b981;
@@ -38,6 +39,54 @@
         .btn-affiliate { display: inline-block; background: var(--primary); color: var(--white); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; transition: background 0.3s; }
         .btn-affiliate:hover { background: var(--primary-dark); }
         .conclusion { background: #e0f2fe; padding: 25px; border-radius: var(--radius); margin-top: 40px; border-left: 5px solid var(--primary); }
+
+        /* LAYOUT PRODUIT AVEC PHOTO */
+        .product-flex { display: flex; align-items: flex-start; gap: 25px; flex-wrap: wrap; }
+        .product-photo { flex-shrink: 0; }
+        .product-photo img { width: 150px !important; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); margin: 0 !important; transition: transform 0.3s ease; }
+        .product-photo img:hover { transform: scale(1.05); }
+        .product-info { flex: 1; min-width: 250px; }
+
+        /* BOUTON CTA AMAZON AVEC EFFET FLASH/PULSE */
+        @keyframes amazonPulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        .amazon-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            animation: amazonPulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        .amazon-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        .amazon-cta-btn:hover::before { left: 100%; }
+        .amazon-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+            animation: none;
+        }
+        .amazon-disclosure { font-size: 0.8rem; color: #94a3b8; font-style: italic; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 18px; border-radius: 8px; margin: 25px 0; }
     </style>
 </head>
 <body>
@@ -53,7 +102,7 @@
         <div class="article-header">
             <div class="article-category">Nutrition</div>
             <h1 class="article-title">Comment Bien Choisir sa Protéine Whey en 2026 ? Le Guide Complet</h1>
-            <div class="article-meta">Mis à jour le 12 Août 2026 • Par l'équipe FormeVital</div>
+            <div class="article-meta">Mis à jour le 16 Novembre 2026 • Par l'équipe FormeVital</div>
         </div>
 
         <img src="whey1.jpg" alt="Shaker de protéine whey après l'entraînement" class="article-img">
@@ -72,50 +121,87 @@
 
             <img src="whey2.jpg" alt="Poudre de protéine whey avec cuillère doseuse">
 
-            <h2>Notre Top 3 des Meilleures Whey en 2026</h2>
+            <h2>Notre Top 3 des Meilleures Protéines en 2026</h2>
 
-             <div class="product-review">
-                <h3>1. Le Meilleur Rapport Qualité/Prix : Whey Concentrée Classic</h3>
-                <div class="product-rating">★★★★★ (4.6/5)</div>
-                <p>Environ 24g de protéines par dose, un goût chocolat correct et un prix imbattable. C'est le choix de la raison pour progresser sans se ruiner.</p>
-                <a href="https://link.amazon/B02J8xPh6" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Voir le prix →</a>
-            </div>
-
+            <!-- PRODUIT 1 : NUTRI&CO WHEY ISOLAT NATIVE -->
             <div class="product-review">
-                <h3>2. La Premium : Whey Isolate Zéro Lactose</h3>
+                <h3>1. La Premium : Nutri&Co Whey Isolat Native</h3>
                 <div class="product-rating">★★★★★ (4.8/5)</div>
-                <p>Filtrée à froid, quasi sans lactose ni graisses. Digestion parfaite même pour les estomacs sensibles. Notre coup de cœur qualité.</p>
-                <a href="https://link.amazon/B07v6RG69" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Voir le prix →</a>
+                <div class="product-flex">
+                    <div class="product-photo">
+                        <a href="https://link.amazon/B07v6RG69" target="_blank" rel="sponsored nofollow">
+                            <img src="nutrico-whey-isolat.jpg" alt="Nutri&Co Whey Isolat Native goût vanille sur Amazon">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <p><strong>27g de protéines • 6,7g BCAA • 3,5g leucine par portion</strong></p>
+                        <p>Issue de lait de pâturages français, filtrée à froid, quasi sans lactose ni graisses. Digestion parfaite même pour les estomacs sensibles. 30 portions (900g), goût vanille naturel. Notre coup de cœur qualité pour la masse musculaire et la récupération.</p>
+                        <a href="https://link.amazon/B07v6RG69" class="amazon-cta-btn" target="_blank" rel="sponsored nofollow">🔥 Voir le prix sur Amazon →</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- PRODUIT 2 : PUR VITAE WHEY/POIS -->
             <div class="product-review">
-                <h3>3. L'Alternative Saine : Whey Native Bio</h3>
-                <div class="product-rating">★★★★☆ (4.4/5)</div>
-                <p>Issue de lait bio de pâturage, sans additifs artificiels. Pour ceux qui privilégient la qualité des ingrédients avant tout.</p>
-                <a href="https://link.amazon/B08I08n75" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Voir le prix →</a>
+                <h3>2. Le Meilleur Rapport Qualité/Prix : Pur Vitae Whey/Pois Protéine</h3>
+                <div class="product-rating">★★★★★ (4.6/5)</div>
+                <div class="product-flex">
+                    <div class="product-photo">
+                        <a href="https://link.amazon/B02J8xPh6" target="_blank" rel="sponsored nofollow">
+                            <img src="purvitae-whey-pois.jpg" alt="Pur Vitae Whey Pois Protéine goût fraise sur Amazon">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <p><strong>Sans édulcorant • Ultra digestible • Nutrition facile</strong></p>
+                        <p>Un mélange intelligent whey + protéine de pois, fabriqué en France, sans édulcorants artificiels. Goût fraise agréable, format économique de 750g. Le choix de la raison pour progresser sans se ruiner, avec une digestion douce grâce à l'apport végétal.</p>
+                        <a href="https://link.amazon/B02J8xPh6" class="amazon-cta-btn" target="_blank" rel="sponsored nofollow">🔥 Voir le prix sur Amazon →</a>
+                    </div>
+                </div>
             </div>
-                <h2>Vidéo : Protéine en poudre, laquelle choisir ?</h2>
-                <div class="video-wrap">
+
+            <!-- PRODUIT 3 : NUTRIPURE PROTÉINE VÉGÉTALE -->
+            <div class="product-review">
+                <h3>3. L'Alternative Saine : Nutripure Protéine Végétale Bio</h3>
+                <div class="product-rating">★★★★☆ (4.4/5)</div>
+                <div class="product-flex">
+                    <div class="product-photo">
+                        <a href="https://link.amazon/B08I08n75" target="_blank" rel="sponsored nofollow">
+                            <img src="nutripure-proteine-vegetale.jpg" alt="Nutripure Protéine Végétale Bio pois et riz sur Amazon">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <p><strong>70% pois + 30% riz • Certifié AB Bio • Fabriqué en France</strong></p>
+                        <p>L'option 100% végétale et certifiée bio pour ceux qui privilégient la qualité des ingrédients avant tout. Le combo pois/riz offre un profil d'acides aminés complet, sans lactose ni allergènes laitiers. Idéale pour les végétariens et les estomacs sensibles.</p>
+                        <a href="https://link.amazon/B08I08n75" class="amazon-cta-btn" target="_blank" rel="sponsored nofollow">🔥 Voir le prix sur Amazon →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIVULGATION AMAZON OBLIGATOIRE -->
+            <p class="amazon-disclosure">*En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Les prix peuvent varier.</p>
+
+            <h2>Vidéo : Protéine en poudre, laquelle choisir ?</h2>
+            <div class="video-wrap">
                 <iframe src="https://www.youtube-nocookie.com/embed/wKaRqXkoimo" title="Protéine en poudre : laquelle choisir pour la prise de muscle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-               <div style="background:#ecfdf5; border-left:5px solid #10b981; border-radius:12px; padding:25px; margin:40px 0; box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
-               <h2 style="font-size:1.4rem; color:#065f46; margin-bottom:10px;">💡 Bonus : Boostez votre métabolisme</h2>
-               <p style="margin-bottom:15px; color:#334155;">Pour accompagner votre whey et accélérer la perte de graisse, notre équipe recommande de découvrir <strong>Java Burn</strong> : un complément naturel à mélanger à votre café du matin pour stimuler le métabolisme et l'énergie.</p>
-               <a href="https://a080dhqhpx4l8o16eipx4fos65.hop.clickbank.net" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Découvrir Java Burn →</a>
+            <div style="background:#ecfdf5; border-left:5px solid #10b981; border-radius:12px; padding:25px; margin:40px 0; box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h2 style="font-size:1.4rem; color:#065f46; margin-bottom:10px;">💡 Bonus : Boostez votre métabolisme</h2>
+                <p style="margin-bottom:15px; color:#334155;">Pour accompagner votre whey et accélérer la perte de graisse, notre équipe recommande de découvrir <strong>Java Burn</strong> : un complément naturel à mélanger à votre café du matin pour stimuler le métabolisme et l'énergie.</p>
+                <a href="https://a080dhqhpx4l8o16eipx4fos65.hop.clickbank.net" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Découvrir Java Burn →</a>
             </div>
-            
+
             <div class="conclusion">
                 <h2>Conclusion</h2>
-                <p>Débutant avec un budget serré ? La <strong>concentrée</strong> est parfaite. Intolérant au lactose ou en sèche ? Foncez sur l'<strong>isolate</strong>. Et si la qualité des ingrédients est votre priorité, la <strong>native bio</strong> vous conviendra. Pensez à vérifier les promotions avant d'acheter !</p>
+                <p>Débutant avec un budget serré ? Le mélange <strong>whey/pois Pur Vitae</strong> est parfait. Intolérant au lactose ou en sèche ? Foncez sur l'<strong>isolat native Nutri&Co</strong>. Et si vous préférez le 100% végétal bio, la <strong>protéine Nutripure</strong> vous conviendra. Pensez à vérifier les promotions avant d'acheter !</p>
             </div>
         </div>
     </main>
-<script src="ga.js"></script>
+    <script src="ga.js"></script>
     <div style="background:#1e293b;color:#fff;text-align:center;padding:30px 20px;">
-<strong>📬 Recevez nos guides gratuits</strong>
-<p style="margin:8px 0;">Conseils santé, fitness & nutrition chaque semaine.</p>
-<a href="index.html#newsletter" style="color:#10b981;font-weight:700;">S'inscrire à la newsletter →</a>
-</div>
+        <strong>📬 Recevez nos guides gratuits</strong>
+        <p style="margin:8px 0;">Conseils santé, fitness & nutrition chaque semaine.</p>
+        <a href="index.html#newsletter" style="color:#10b981;font-weight:700;">S'inscrire à la newsletter →</a>
+    </div>
 </body>
 </html>
