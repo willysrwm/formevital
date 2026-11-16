@@ -31,8 +31,6 @@
         .article-content ul { margin-bottom: 20px; padding-left: 20px; }
         .article-content li { margin-bottom: 10px; }
         .article-content img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); margin: 10px 0 25px; }
-        .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin: 30px 0; }
-        .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .product-review { background: var(--white); border-radius: var(--radius); padding: 25px; margin-bottom: 30px; box-shadow: var(--shadow); border-left: 5px solid var(--secondary); }
         .product-review h3 { font-size: 1.3rem; color: var(--dark); margin-bottom: 10px; }
         .product-rating { color: #f59e0b; font-size: 1.2rem; margin-bottom: 15px; }
@@ -87,6 +85,29 @@
             animation: none;
         }
         .amazon-disclosure { font-size: 0.8rem; color: #94a3b8; font-style: italic; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 18px; border-radius: 8px; margin: 25px 0; }
+
+        /* BONUS CLICKBANK (JAVA BURN) */
+        .bonus-box { background: #ecfdf5; border-left: 5px solid #10b981; border-radius: 12px; padding: 25px; margin: 40px 0; box-shadow: var(--shadow); }
+        .bonus-box h2 { font-size: 1.4rem; color: #065f46; margin: 0 0 15px; border: none; padding: 0; }
+        .bonus-flex { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+        .bonus-photo { flex-shrink: 0; }
+        .bonus-photo img { width: 200px !important; height: auto; border-radius: 12px; margin: 0 !important; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 0.3s ease; }
+        .bonus-photo img:hover { transform: scale(1.05); }
+        .bonus-info { flex: 1; min-width: 250px; }
+        .bonus-info p { margin-bottom: 15px; color: #334155; }
+        .javaburn-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+            transition: all 0.3s ease;
+        }
+        .javaburn-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6); }
     </style>
 </head>
 <body>
@@ -180,15 +201,21 @@
             <!-- DIVULGATION AMAZON OBLIGATOIRE -->
             <p class="amazon-disclosure">*En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Les prix peuvent varier.</p>
 
-            <h2>Vidéo : Protéine en poudre, laquelle choisir ?</h2>
-            <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/wKaRqXkoimo" title="Protéine en poudre : laquelle choisir pour la prise de muscle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <div style="background:#ecfdf5; border-left:5px solid #10b981; border-radius:12px; padding:25px; margin:40px 0; box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
-                <h2 style="font-size:1.4rem; color:#065f46; margin-bottom:10px;">💡 Bonus : Boostez votre métabolisme</h2>
-                <p style="margin-bottom:15px; color:#334155;">Pour accompagner votre whey et accélérer la perte de graisse, notre équipe recommande de découvrir <strong>Java Burn</strong> : un complément naturel à mélanger à votre café du matin pour stimuler le métabolisme et l'énergie.</p>
-                <a href="https://a080dhqhpx4l8o16eipx4fos65.hop.clickbank.net" class="btn-affiliate" target="_blank" rel="sponsored nofollow">Découvrir Java Burn →</a>
+            <!-- BONUS JAVA BURN AVEC PHOTO -->
+            <div class="bonus-box">
+                <h2>💡 Bonus : Boostez votre métabolisme</h2>
+                <div class="bonus-flex">
+                    <div class="bonus-photo">
+                        <a href="https://a080dhqhpx4l8o16eipx4fos65.hop.clickbank.net" target="_blank" rel="sponsored nofollow noopener">
+                            <img src="Javaburn-product.png" alt="Java Burn - complément naturel à mélanger au café pour stimuler le métabolisme">
+                        </a>
+                    </div>
+                    <div class="bonus-info">
+                        <p>Pour accompagner votre whey et accélérer la perte de graisse, notre équipe recommande <strong>Java Burn</strong> : un complément naturel en gouttes à mélanger à votre café du matin pour stimuler le métabolisme, l'énergie et la concentration — sans changer le goût de votre café.</p>
+                        <p style="font-size:0.95rem; color:#065f46;"><strong>✅ Sans stimulants agressifs • ✅ Format gouttes pratique • ✅ Garantie 60 jours</strong></p>
+                        <a href="https://a080dhqhpx4l8o16eipx4fos65.hop.clickbank.net" class="javaburn-cta-btn" target="_blank" rel="sponsored nofollow noopener">🔥 Découvrir Java Burn →</a>
+                    </div>
+                </div>
             </div>
 
             <div class="conclusion">
