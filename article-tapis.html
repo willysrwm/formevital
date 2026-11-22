@@ -75,33 +75,90 @@
 
             <h2>Notre Sélection des 3 Meilleurs Modèles</h2>
 
-            <!-- Produit 1 -->
-            <div class="product-review">
-                <h3>1. Le Choix Premium : Sportstech F31 (Édition 2026)</h3>
-                <div class="product-rating">★★★★★ (4.8/5)</div>
-                <p>C'est le coup de cœur de notre rédaction. Avec son moteur de 2.5 CV et son système d'amortissement articulaire, il est parfait pour les coureurs réguliers. Une fois plié, il ne prend que 30 cm d'épaisseur.</p>
-                <p><strong>Les + :</strong> Silencieux, application interactive incluse, système de pliage hydraulique.</p>
-                <a href="https://link.amazon/B02j8r3mA" class="btn-affiliate" target="_blank">Voir le prix sur Amazon →</a>
-            </div>
+           <!-- STYLE HO AN'NY SARY PRODUIT (Ampidio ao amin'ny <style> na <head>) -->
+<style>
+    .product-card-img {
+        width: 100%;
+        max-width: 350px; /* Habe max ho an'ny sary */
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        background: #f8fafc; /* Loko ambadika raha transparent ny sary */
+        display: block;
+    }
+    
+    @media (min-width: 768px) {
+        .product-content-flex {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .product-card-img {
+            flex-shrink: 0;
+            margin-bottom: 0;
+        }
+    }
+</style>
 
-            <!-- Produit 2 -->
-            <div class="product-review">
-                <h3>2. Le Meilleur Rapport Qualité/Prix : FitPro Compact 500</h3>
-                <div class="product-rating">★★★★☆ (4.5/5)</div>
-                <p>Idéal pour les budgets moyens. Il offre une surface de course correcte et 12 programmes intégrés. Son design épuré s'intègre parfaitement dans un salon moderne.</p>
-                <p><strong>Les + :</strong> Très facile à déplacer grâce à ses roulettes, excellent prix.</p>
-                <a href="https://link.amazon/B086a3bEp" class="btn-affiliate" target="_blank">Voir le prix sur Amazon →</a>
-            </div>
+<!-- HTML HO AN'NY SECTION (Soloy ny efa misy teo) -->
+<h2 style="color: var(--primary); margin-top: 40px; border-bottom: 2px solid var(--secondary); padding-bottom: 10px;">
+    Notre Sélection des 3 Meilleurs Modèles
+</h2>
 
-            <!-- Produit 3 -->
-            <div class="product-review">
-                <h3>3. Le Spécial Petit Espace : Le WalkingPad Ultra-Mince</h3>
-                <div class="product-rating">★★★★☆ (4.3/5)</div>
-                <p>Plutôt conçu pour la marche active (jusqu'à 6 km/h) que pour le sprint. Il se glisse facilement sous un lit ou un canapé. Parfait pour ceux qui travaillent en télétravail et veulent rester actifs.</p>
-                <p><strong>Les + :</strong> Zéro encombrement, télécommande incluse, ultra-léger.</p>
-                <a href="https://link.amazon/B0cbcYZdQ" class="btn-affiliate" target="_blank">Voir le prix sur Amazon →</a>
-            </div>
+<!-- PRODUIT 1 -->
+<div class="product-card" style="background: white; border-left: 5px solid var(--secondary); border-radius: 12px; padding: 30px; margin: 30px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <div class="product-content-flex">
+        <!-- SOLONY ETO NY ANARAN'NY SARY VAOWAO -->
+        <img src="tapis-sportstech-f31.jpg" alt="Sportstech F31 Tapis de Course" class="product-card-img">
+        
+        <div style="flex: 1;">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 10px;">1. Le Choix Premium : Sportstech F31 (Édition 2026)</h3>
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐ (4.8/5)</div>
+            
+            <p style="color: #475569; line-height: 1.6; margin-bottom: 15px;">
+                C'est le coup de cœur de notre rédaction. Avec son moteur de 2.5 CV et son système d'amortissement articulaire, il est parfait pour les coureurs réguliers. Une fois plié, il ne prend que 30 cm d'épaisseur.
+            </p>
+            
+            <p style="margin-bottom: 20px;"><strong>Les + :</strong> Silencieux, application interactive incluse, système de pliage hydraulique.</p>
+            
+            <a href="https://link.amazon/B0cri9WC5" target="_blank" rel="nofollow sponsored" style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s;">
+                Voir le prix sur Amazon →
+            </a>
+        </div>
+    </div>
+</div>
 
+<!-- PRODUIT 2 (Ovatra araka ny vidinao) -->
+<div class="product-card" style="background: white; border-left: 5px solid var(--secondary); border-radius: 12px; padding: 30px; margin: 30px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <div class="product-content-flex">
+        <img src="tapis-modele-2.jpg" alt="Nom du Modèle 2" class="product-card-img">
+        <div style="flex: 1;">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 10px;">2. Le Meilleur Rapport Qualité/Prix : [NOM MODÈLE]</h3>
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 15px;">⭐⭐⭐⭐☆ (4.5/5)</div>
+            <p style="color: #475569; line-height: 1.6; margin-bottom: 15px;">[Description...]</p>
+            <a href="https://link.amazon/B02n8EG9C" target="_blank" rel="nofollow sponsored" style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">
+                Voir le prix sur Amazon →
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- PRODUIT 3 (Ovatra araka ny vidinao) -->
+<div class="product-card" style="background: white; border-left: 5px solid var(--secondary); border-radius: 12px; padding: 30px; margin: 30px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <div class="product-content-flex">
+        <img src="tapis-modele-3.jpg" alt="Nom du Modèle 3" class="product-card-img">
+        <div style="flex: 1;">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 10px;">3. L'Alternative Compacte : [NOM MODÈLE]</h3>
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 15px;">⭐⭐⭐⭐☆ (4.3/5)</div>
+            <p style="color: #475569; line-height: 1.6; margin-bottom: 15px;">[Description...]</p>
+            <a href="https://link.amazon/B0aeldBnk" target="_blank" rel="nofollow sponsored" style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">
+                Voir le prix sur Amazon →
+            </a>
+        </div>
+    </div>
+</div>
             <div class="conclusion">
                 <h2>Conclusion</h2>
                 <p>Si vous avez le budget et la place, le <strong>Sportstech F31</strong> reste l'investissement le plus durable. Pour les petits espaces, le <strong>WalkingPad</strong> révolutionnera votre quotidien. N'oubliez pas de vérifier les promotions en cours avant de valider votre panier !</p>
